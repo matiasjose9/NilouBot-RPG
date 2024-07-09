@@ -25,8 +25,9 @@
       ],
       "texto3": "> Información sobre mí"
     },
-    "_descargas": {
-      "texto1": "Ingresa un link, ejemplo"
+    "_registro": {
+      "texto1": "*Ya ᥱs𝗍ᥲ́s registrado*"
+      "texto2": "*¿Quiere registrarse de vuelta?*"
     }
   }
 }
