@@ -16,11 +16,13 @@
       "saludo": "Hello how are you"
     },
     "_general": {
-      "texto1": "hello xd",
+      "texto1": "`NilouBot-Lite`",
       "texto2": [
-      "Info about me",
-      "I am NilouBot-Lite, a multi-device WhatsApp bot",
-    "I was created by matias-crypto and Enzo"
+      "Info about me ",
+      "I am NilouBot-Lite, a multi-device WhatsApp bot ",
+    "I was created by matias-crypto and Enzo ",
+   "I was created with the purpose of helping people download videos from Instagram, Facebook and etc. ",
+   "I am a simple bot but soon I will have many more functions, trust me 🤗 "
    ]
     }
   }
