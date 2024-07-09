@@ -18,7 +18,7 @@ let handler = async (m, { conn }) => {
         for (let link of links) {
             if (link.includes(groupLink) || link.includes(channelLink)) {
                 isOfficialLink = true;
-                conn.reply(m.chat, "`Detecté un enlace de mis enlaces oficiales.`\n\n> Espero estés en el grupo oficial del bot y que me estés siguiendo en mi canal de WhatsApp.", m, rcanal);
+                conn.reply(m.chat, "`Detecté un enlace de mis links oficiales.`\n\n> Espero estés en el grupo oficial del bot y que me estés siguiendo en mi canal de WhatsApp.", m, rcanal);
                 break;
             }
         }
