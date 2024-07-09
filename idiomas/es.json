@@ -1,17 +1,29 @@
 {
     "plugins": {
         "_language": {
-            "errorAlreadyRegistered": "🚫 𝐄𝐑𝐑𝐎𝐑 🚫 *Ya ᥱs𝗍ᥲ́s registrado*",
+            "texto1": [
+                "El idioma disponible es Español",
+                "El idioma disponible es Inglés",
+                "Comando incorrecto",
+                "El idioma actual es"
+            ],
+            "texto2": [
+                "El idioma del grupo está definido en Español",
+                "El idioma del grupo está definido en Inglés"
+            ],
+            "texto3": "Este comando solo puede usarse en grupos",
+            "texto4": "Debes ser administrador para cambiar el idioma del grupo",
+            "errorAlreadyRegistered": "🚫 𝐄𝐑𝐑𝐎𝐑 🚫 *Ya ᥱs𝗍ᥲ́s registrado*\n\n¿Quiere registrarse de vuelta?\n\n💬 Use el siguiente comando*\n*${usedPrefix}unreg* <Numero de serie>",
             "useUnregCommand": "¿Quiere registrarse de vuelta?\n\n💬 Use el siguiente comando*\n*${usedPrefix}unreg* <Numero de serie>",
             "serialNumber": "Número de serie",
-            "errorWrongFormat": "🚫 𝐄𝐑𝐑𝐎𝐑 🚫 *Forma incorrecta*",
-            "correctUsage": "📝 Uso correcto del Comando",
-            "example": "Ejemplo",
+            "errorWrongFormat": "🚫 𝐄𝐑𝐑𝐎𝐑 🚫 *Forma incorrecta*\n\n📝 Uso correcto Del Comando: *${usedPrefix + command} nombre.edad*\n [ 💡 ] Ejemplo : *${usedPrefix + command}* ${name2}.18",
+            "correctUsage": "📝 Uso correcto Del Comando",
+            "example": "💡 Ejemplo :",
             "errorEmptyName": "🚫 𝐄𝐑𝐑𝐎𝐑 🚫 El nombre no puede estar vacío*",
-            "errorEmptyAge": "🚫 𝐄𝐑𝐑𝐎𝐑 🚫 *La edad no puede quedarse vacía*",
-            "errorNameTooLong": "🚫 𝐄𝐑𝐑𝐎𝐑 🚫 El nombre es muy largo*",
-            "errorAgeTooHigh": "Un dinosaurio quiere jugar con el bot?",
-            "errorAgeTooLow": "Eres menor, no puedes registrarte en este Bot",
+            "errorEmptyAge": "🚫 𝐄𝐑𝐑𝐎𝐑 🚫 *La edad no puede quedarse vacia*",
+            "errorNameTooLong": "*🚫 𝐄𝐑𝐑𝐎𝐑 🚫 El nombre es muy largo*",
+            "errorAgeTooHigh": "*Un dinosaurio quiere jugar con el bot?*",
+            "errorAgeTooLow": "*Eres menor, no  puedes registrarte en este Bot*",
             "saludo": `°°°·.¯°·._.··._.·°°°
 > *✅ 𝑹𝑬𝑮𝑰𝑺𝑻𝑹𝑶* 
 ╭───── • ◆ • ─────╮
