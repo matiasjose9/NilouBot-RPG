@@ -10,6 +10,7 @@ let tags = {
   'tools': '𝐓𝐎𝐎𝐋𝐒',
   'sticker': '𝐒𝐓𝐈𝐂𝐊𝐄𝐑𝐒',
   'owner': '𝐂𝐑𝐄𝐀𝐃𝐎𝐑',
+  'nilou': 'NILOU-INFO'
 }
 
 const defaultMenu = {
