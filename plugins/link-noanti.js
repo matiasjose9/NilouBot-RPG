@@ -4,7 +4,7 @@ let handler = async (m, { conn }) => {
 
     
     const groupLink = "https://chat.whatsapp.com/tu-grupo";
-    const channelLink = "https://wa.me/tu-canal";
+    const channelLink = "https://whatsapp.com/channel/0029VajIId22phHQLslZah1n";
 
     
     let links = m.text.match(linkRegex);
