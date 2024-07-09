@@ -25,8 +25,9 @@
       ],
       "texto3": "> Information about me"
     },
-    "_descargas": {
-      "texto1": "Enter a link, example"
+    "_registro": {
+      "texto1": "You are already registered"
+      "texto2": "Do you want to register again?"
     }
   }
 }
