@@ -1,19 +1,25 @@
 {
-    "plugins": {
-        "_language": {
-            "texto1": [
-                "The available language is Spanish",
-                "The available language is English",
-                "Incorrect command",
-                "The current language is"
-            ],
-            "texto2": [
-                "The group language is set to Spanish",
-                "The group language is set to English"
-            ],
-            "texto3": "This command can only be used in groups",
-            "texto4": "You must be an admin to change the group language",
-            "saludo": "Hello, how are you?"
-        }
+  "menu": {
+    "before": "╭─────────────┈⊷\n│  「 𝗕𝗢𝗧 𝗜𝗡𝗙𝗢 」\n╰┬────────────┈⊷\n┌┤ *✨ 𝗠𝗼𝗱𝗲* : Public\n│ *🌹 𝗕𝗮𝗶𝗹𝗲𝘆𝘀* : Multi Device\n│ *⏰ 𝗨𝗽𝘁𝗶𝗺𝗲* : %muptime\n│ *👤 𝗨𝘀𝗲𝗿𝘀* : %totalreg\n╰────────────┈⊷\n%readmore\n╭─────────────┈⊷\n│   「 𝗨𝗦𝗘𝗥 𝗜𝗡𝗙𝗢 」\n╰┬────────────┈⊷\n┌┤ *📌 𝗡𝗮𝗺𝗲* : %name\n│ *🪙 𝗡𝗶𝗹𝗼𝘂𝗖𝗼𝗶𝗻𝘀* : %limit\n│ *🪷 𝗟𝗲𝘃𝗲𝗹* : %level\n│ *🌸 𝗫𝗣* : %totalexp\n╰────────────┈⊷\n%readmore\n\n\t\t\t*𝗖 𝗢 𝗠 𝗠 𝗔 𝗡 𝗗 𝗦*\n",
+    "header": "╭────── ✾ ────── \n│   *`「 %category 」`*\n╰┬─━━━━━━⊱✿⊰━━━━━━─\n┌┤", 
+    "body": "│ %cmd %islimit %isPremium\n",
+    "footer": "╰━━━━━━ • ✿ • ━━━━━━\n",
+    "after": ""
+  },
+  "errors": {
+    "menu": "Sorry, the menu has an error."
+  },
+  "package": {
+    "name": "Package Name",
+    "version": "Version",
+    "description": "Description",
+    "main": "Main",
+    "author": {
+      "name": "Author"
+    },
+    "license": "License",
+    "homepage": {
+      "url": "Homepage URL"
     }
+  }
 }
