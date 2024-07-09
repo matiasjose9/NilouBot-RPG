@@ -26,6 +26,7 @@ let handler = async (m, { conn }) => {
     }
 }
 
+handler.group = true
 handler.customPrefix = /https?:\/\/[^\s]+/i;
 handler.command = new RegExp;
 
