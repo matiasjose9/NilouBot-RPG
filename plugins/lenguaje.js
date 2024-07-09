@@ -36,7 +36,7 @@ ${tradutor.texto1[0]}
 *${usedPrefix}lang* es
 
 ${tradutor.texto1[1]}
-`)
+`, rcanal)
       }
     }
 
