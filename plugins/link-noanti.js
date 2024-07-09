@@ -1,7 +1,7 @@
 let isInsultlinkEnabled = true;
 
 let handler = async (m, { conn, text }) => {
-    const command = text.trim().toLowerCase();
+    
 
     if (command === 'off insultlink') {
         isInsultlinkEnabled = false;
