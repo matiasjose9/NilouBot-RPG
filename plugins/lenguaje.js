@@ -5,7 +5,7 @@ const handler = async (m, { args, usedPrefix, command, isAdmin }) => {
     const data = global
     let idioma = data.db.data.users[m.sender].language || 'es' // Idioma predeterminado
     
-    // Verificar si el archivo de idioma existe
+    
     if (!fs.existsSync(`./idiomas/${idioma}.json`)) {
       throw new Error(`Archivo de idioma no encontrado: ./idiomas/${idioma}.json`)
     }
@@ -48,10 +48,10 @@ ${tradutor.texto1[1]}
 
       if (sigla === 'es') {
         global.db.data.chats[m.chat].language = 'es'
-        m.reply(`*[ ✅ ] Configuración del grupo*\n\n*—◉* *_Idioma definido a Español 🇪🇸_*`)
+        m.reply(`*Configuración* del grupo*\n\n*_Idioma definido a Español 🇪🇸_*`)
       } else if (sigla === 'en') {
         global.db.data.chats[m.chat].language = 'en'
-        m.reply(`*[ ✅ ] Configuración del grupo*\n\n*—◉* *_Idioma definido a Inglés 🇬🇧_*`)
+        m.reply(`*Configuración* del grupo*\n\n*_Idioma definido a Inglés 🇬🇧_*`)
       } else {
         m.reply(`
 ${tradutor.texto2[0]}
@@ -67,8 +67,7 @@ ${tradutor.texto2[1]}
     if (m.isGroup) {
       global.db.data.chats[m.chat].language = 'es'
     }
-    m.reply(`*[ERROR]* -  _Por defecto el idioma estaba configurado en español._
-\`\`\`contacta a los creadores del bot\`\`\` `)
+    m.reply(`*ERROR* Por defecto el idioma esta configurado en español, contacta a los creadores del bot con el comando .owner`)
   }
 }
 
