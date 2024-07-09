@@ -33,7 +33,6 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
 > *📌 𝑵𝑼𝑴𝑬𝑹𝑶 𝑫𝑬 𝑺𝑬𝑹𝑰𝑬*:
 > ${sn}
 > Use *${usedPrefix}menu* para ver el menu de comandos
-${traductor.texto1}
 ┗───── • ◆ • ─────╯
 `.trim())
 }
