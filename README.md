@@ -3,10 +3,7 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=0000FF&width=435&lines=Bienvenido+al+Bot+de+WhatsApp+Multidevice;Gracias+por+preferir+NilouBotLite-MD)](https://git.io/typing-svg)
 
 </div>
-<br>
-<div align="center">
-  <img title="WhatsApp-Bot-MD" src="https://img.shields.io/badge/-WHATSAPP--BOT--MD-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge">
-</a>
+
 <br>
 <img src="https://i.pinimg.com/736x/53/53/f0/5353f0f80c3ae6705911d2e966195566.jpg" alt="NilouBot-Lite By Enzo & matias-crypto" width="400" height="230">
 </div>
