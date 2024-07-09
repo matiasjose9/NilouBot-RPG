@@ -1,12 +1,24 @@
 {
     "plugins": {
         "_language": {
-            "errorAlreadyRegistered": "🚫 ERROR 🚫 *You are already registered*",
+            "texto1": [
+                "The available language is Spanish",
+                "The available language is English",
+                "Incorrect command",
+                "The current language is"
+            ],
+            "texto2": [
+                "The group language is set to Spanish",
+                "The group language is set to English"
+            ],
+            "texto3": "This command can only be used in groups",
+            "texto4": "You must be an administrator to change the group language",
+            "errorAlreadyRegistered": "🚫 ERROR 🚫 *You are already registered*\n\nDo you want to register again?\n\n💬 Use the following command*\n*${usedPrefix}unreg* <Serial number>",
             "useUnregCommand": "Do you want to register again?\n\n💬 Use the following command*\n*${usedPrefix}unreg* <Serial number>",
             "serialNumber": "Serial number",
-            "errorWrongFormat": "🚫 ERROR 🚫 *Incorrect format*",
+            "errorWrongFormat": "🚫 ERROR 🚫 *Incorrect format*\n\n📝 Correct usage: *${usedPrefix + command} nombre.edad*\n [ 💡 ] Example : *${usedPrefix + command}* ${name2}.18",
             "correctUsage": "📝 Correct usage of the command",
-            "example": "Example",
+            "example": "Example :",
             "errorEmptyName": "🚫 ERROR 🚫 The name cannot be empty*",
             "errorEmptyAge": "🚫 ERROR 🚫 *Age cannot be empty*",
             "errorNameTooLong": "🚫 ERROR 🚫 The name is too long*",
