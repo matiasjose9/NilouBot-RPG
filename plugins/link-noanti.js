@@ -17,10 +17,10 @@ let handler = async (m, { conn }) => {
     if (links) {
         for (let link of links) {
             if (link.includes(groupLink) || link.includes(channelLink)) {
-                conn.reply(m.chat, "Detecte un link de mis enlaces oficiales\n\nEspero estés en el grupo oficial del bot y que me esté siguiendo en mi canal de WhatsApp.", m);
+                conn.reply(m.chat, "Detecte un link de mis enlaces oficiales\n\nEspero estés en el grupo oficial del bot y que me esté siguiendo en mi canal de WhatsApp.", m, rcanal);
             } else {
                 let randomInsult = insults[Math.floor(Math.random() * insults.length)];
-                conn.reply(m.chat, randomInsult, m);
+                conn.reply(m.chat, randomInsult, m, rcanal);
             }
         }
     }
