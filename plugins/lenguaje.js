@@ -3,7 +3,7 @@ import { promises as fs } from 'fs';
 const handler = async (m, { args, usedPrefix, command, isAdmin }) => {
   try {
     const data = global;
-    let idioma = data.db.data.users[m.sender].language || 'es'; // Idioma predeterminado
+    let idioma = data.db.data.users[m.sender].language || 'es';
 
     if (!fs.existsSync(`./idiomas/${idioma}.json`)) {
       throw new Error(`Archivo de idioma no encontrado: ./idiomas/${idioma}.json`);
@@ -22,21 +22,12 @@ const handler = async (m, { args, usedPrefix, command, isAdmin }) => {
                            sigla === 'ar' ? 'العربية 🇸🇦' : '';
         m.reply(`*Nilou - Bot*\n\n*—◉* *_Idioma definido a ${languageName}_*`);
       } else {
-        m.reply(`
-${tradutor.texto1[2]}
-${tradutor.texto1[3]} (${data.db.data.users[m.sender].language})
-${tradutor.texto1[0]}
-*${usedPrefix}lang* es
-
-${tradutor.texto1[1]}
-`);
+        throw new Error(`${tradutor.texto1[2]}\n${tradutor.texto1[3]} (${data.db.data.users[m.sender].language})\n${tradutor.texto1[0]}\n*${usedPrefix}lang* es\n\n${tradutor.texto1[1]}`);
       }
     }
 
-    
-
   } catch (error) {
-    console.error(error); // Mensaje de depuración
+    console.error(error);
     global.db.data.users[m.sender].language = 'es';
     m.reply(`*[ERROR]* - _Por defecto el idioma estaba configurado en español._
 \`\`\`Contacta a los creadores del bot\`\`\` `);
