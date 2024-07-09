@@ -34,7 +34,7 @@ figlet('SYLPHA-BOT', {
   console.log(chalk.yellow('I N I C I A N D O...'));
 });
 
-figlet('Creado Por JTxs', {
+figlet('Creado Por Enzo y matias-crypto', {
   font: 'Standard',
   horizontalLayout: 'default',
   verticalLayout: 'default'
@@ -46,7 +46,7 @@ figlet('Creado Por JTxs', {
   console.log(chalk.magenta(data));
 });
 
-say('Sylpha - Bot', {
+say('NilouBotLite-MD', {
   font: 'chrome',
   align: 'center',
   gradient: ['red', 'magenta']
