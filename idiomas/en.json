@@ -3,17 +3,20 @@
     "_language": {
       "texto1": [
         "Please use one of the following languages:",
-        "Example: !lang es",
-        "Unsupported language.",
-        "The current language is"
+        "Example: !lang en",
+        "Language not supported.",
+        "Current language is"
       ],
       "texto2": [
         "Please use one of the following languages:",
         "Example:"
       ],
       "texto3": "This command can only be used in groups.",
-      "texto4": "You need to be an admin to change the group language.",
-      "saludo": "Hello how are You bro"
+      "texto4": "You need to be an admin to change the group's language.",
+      "saludo": "Hello how are you"
+    },
+    "_general": {
+      "texto1": "hello xd"
     }
   }
 }
