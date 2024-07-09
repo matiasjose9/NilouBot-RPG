@@ -71,6 +71,7 @@ ${tradutor.texto2[1]}
   }
 }
 
+handler.tags = ['nilou'];
 handler.command = /^(lang|langgroup)$/i
 
 export default handler
