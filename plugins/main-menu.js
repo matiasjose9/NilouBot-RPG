@@ -3,6 +3,12 @@ import { join } from 'path'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
+        const data = global;
+        const idioma = data.db.data.users[m.sender].language;
+        const _translate = JSON.parse(fs.readFileSync(`./idiomas/${idioma}.json`, 'utf8'));
+        const traductor = _translate.plugins._general;
+
+
 let tags = {
   'main': '𝐈𝐍𝐅𝐎',
   'search': '𝐒𝐄𝐀𝐑𝐂𝐇',
@@ -27,6 +33,7 @@ const defaultMenu = {
 ╭─────────────┈⊷
 │   「 𝗜𝗡𝗙𝗢 𝗨𝗦𝗘𝗥𝗦 」
 ╰┬────────────┈⊷
+${traductor.texto1}
 ┌┤ *📌 𝑵𝒐𝒎𝒃𝒓𝒆* : %name
 │ *🪙 𝑵𝒊𝒍𝒐𝒖𝑪𝒐𝒊𝒏𝒔* : %limit
 │ *🪷 𝑵𝒊𝒗𝒆𝒍* : %level
