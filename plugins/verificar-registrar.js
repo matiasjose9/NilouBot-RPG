@@ -22,17 +22,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   user.regTime = + new Date
   user.registered = true
   let sn = createHash('md5').update(m.sender).digest('hex')
-  m.reply(`
-°°°·.¯°·._.··._.·°°°
-> *✅ 𝑹𝑬𝑮𝑰𝑺𝑻𝑹𝑶* 
-╭───── • ◆ • ─────╮
-> *✍🏻 𝑵𝑶𝑴𝑩𝑹𝑬:* ${name}
-> *✨ 𝑬𝑫𝑨𝑫* : ${age} años
-> *📌 𝑵𝑼𝑴𝑬𝑹𝑶 𝑫𝑬 𝑺𝑬𝑹𝑰𝑬*:
-> ${sn}
-> Use *${usedPrefix}menu* para ver el menu de comandos
-┗───── • ◆ • ─────╯
-`.trim())
+  m.reply(tradutor.saludo)
 }
 handler.help = ['reg'].map(v => v + ' <nombre.edad>')
 handler.tags = ['REGISTRO']
