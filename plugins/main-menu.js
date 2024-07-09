@@ -6,7 +6,7 @@ import { xpRange } from '../lib/levelling.js'
         const data = global;
         const idioma = data.db.data.users[m.sender].language;
         const _translate = JSON.parse(fs.readFileSync(`./idiomas/${idioma}.json`, 'utf8'));
-        const traductor = _translate.plugins._general;
+        const traductor = _translate.plugins._descargas;
 
 
 let tags = {
@@ -30,10 +30,10 @@ const defaultMenu = {
 │ *👤 𝑼𝒔𝒖𝒂𝒓𝒊𝒐𝒔* : %totalreg
 ╰────────────┈⊷
 %readmore
+%traductor.texto1
 ╭─────────────┈⊷
 │   「 𝗜𝗡𝗙𝗢 𝗨𝗦𝗘𝗥𝗦 」
 ╰┬────────────┈⊷
-${traductor.texto1}
 ┌┤ *📌 𝑵𝒐𝒎𝒃𝒓𝒆* : %name
 │ *🪙 𝑵𝒊𝒍𝒐𝒖𝑪𝒐𝒊𝒏𝒔* : %limit
 │ *🪷 𝑵𝒊𝒗𝒆𝒍* : %level
