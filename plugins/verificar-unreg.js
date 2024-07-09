@@ -7,6 +7,6 @@ m.reply(`> *Listo, usted ya no está registrado*`)
 
 }
 handler.command = ['unreg']
-handler.tags = ['registro']
+handler.tags = ['REGISTRO']
 handler.register = true
 export default handler
