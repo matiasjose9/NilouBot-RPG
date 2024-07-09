@@ -18,7 +18,7 @@ ${traductor.texto2.map(item => item)}
     }
 };
 
-handler.tags = ['NILOU-INFO'];
+handler.tags = ['nilou'];
 handler.command = /^(nilou)$/i;
 
 export default handler;
