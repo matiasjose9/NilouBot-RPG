@@ -1,19 +1,18 @@
 {
-    "plugins": {
-        "_language": {
-            "texto1": [
-                "The available language is Spanish",
-                "The available language is English",
-                "Incorrect command",
-                "The current language is"
-            ],
-            "texto2": [
-                "The group language is set to Spanish",
-                "The group language is set to English"
-            ],
-            "texto3": "This command can only be used in groups",
-            "texto4": "You must be an administrator to change the group language",
-            "saludo": "Hi, how are You?"
-        }
+  "plugins": {
+    "_language": {
+      "texto1": [
+        "Please use one of the following languages:",
+        "Example: !lang es",
+        "Unsupported language.",
+        "The current language is"
+      ],
+      "texto2": [
+        "Please use one of the following languages:",
+        "Example:"
+      ],
+      "texto3": "This command can only be used in groups.",
+      "texto4": "You need to be an admin to change the group language."
     }
+  }
 }
