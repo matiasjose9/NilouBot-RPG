@@ -4,12 +4,12 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-  'main': '𝐈𝐍𝐅𝐎',
-  'search': '𝐒𝐄𝐀𝐑𝐂𝐇',
-  'dl': '𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐒',
-  'tools': '𝐓𝐎𝐎𝐋𝐒',
-  'sticker': '𝐒𝐓𝐈𝐂𝐊𝐄𝐑𝐒',
-  'owner': '𝐂𝐑𝐄𝐀𝐃𝐎𝐑',
+  'main': 'GENERAL',
+  'search': 'SEARCH',
+  'dl': 'DOWNLOADS',
+  'tools': 'TOOLS',
+  'sticker': 'STICKERS',
+  'owner': 'OWNERS',
 }
 
 const defaultMenu = {
