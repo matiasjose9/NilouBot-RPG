@@ -12,7 +12,7 @@ const handler = async (m, { conn, args, command, usedPrefix }) => {
   const _translate = JSON.parse(fs.readFileSync(`./idiomas/${idioma}.json`));
   const tradutor = _translate.plugins._descargas;
 
-  if (!args[0]) throw `${tradutor.texto1} _${usedPrefix + command} https://www.instagram.com/reel/C8sWV3Nx_GZ/?igsh=MWZoeTY2cW01Nzg1bQ==`;
+  if (!args[0]) throw `${tradutor.texto1} !ig https://www.instagram.com/reel/C8sWV3Nx_GZ/?igsh=MWZoeTY2cW01Nzg1bQ==`;
   await m.reply(global.wait);
 
   try {
