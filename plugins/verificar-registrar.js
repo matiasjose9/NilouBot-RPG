@@ -10,7 +10,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
         const traductor = _translate.plugins._registro;
 
   let name2 = conn.getName(m.sender)
-  if (user.registered === true) throw `🚫 𝐄𝐑𝐑𝐎𝐑 🚫 ${traductor.texto1}\n\n${traductor.texto2}\n\n💬 Use el siguiente comando*\n*${usedPrefix}unreg* <Numero de serie>`
+  if (user.registered === true) throw `🚫 𝐄𝐑𝐑𝐎𝐑 🚫 ${traductor.texto1}\n\n💬 Use el siguiente comando*\n*${usedPrefix}unreg* <Numero de serie>`
   if (!Reg.test(text)) throw `🚫 𝐄𝐑𝐑𝐎𝐑 🚫 *Forma incorrecta*\n\n📝 Uso correcto Del Comando: *${usedPrefix + command} nombre.edad*\n [ 💡 ] Ejemplo : *${usedPrefix + command}* ${name2}.18`
   let [_, name, splitter, age] = text.match(Reg)
   if (!name) throw '🚫 𝐄𝐑𝐑𝐎𝐑 🚫 El nombre no puede estar vacío*'
