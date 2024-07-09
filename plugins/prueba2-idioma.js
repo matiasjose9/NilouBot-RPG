@@ -8,7 +8,7 @@ const handler = async (m) => {
         const traductor = _translate.plugins._general;
 
         const info = `
-${traductor.texto1}\n\n
+${traductor.texto1}\n
 ${traductor.texto2.map(item => item)}
 `;
 
