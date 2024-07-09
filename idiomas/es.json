@@ -16,7 +16,12 @@
       "saludo": "Hola cómo estás"
     },
     "_general": {
-      "texto1": "hola xd"
+      "texto1": "¡Hola xd!",
+      "texto2": [
+        "Información sobre mí",
+        "Soy NilouBot-Lite, un bot de WhatsApp multi-dispositivo",
+        "Fui creado por matias-crypto y Enzo"
+      ]
     }
   }
 }
