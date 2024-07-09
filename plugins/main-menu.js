@@ -4,21 +4,18 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-  'main': 'GENERAL',
-  'search': 'SEARCH',
-  'dl': 'DOWNLOADS',
-  'tools': 'TOOLS',
-  'sticker': 'STICKERS',
-  'owner': 'OWNERS',
-  'nilou': 'NILOU-INFO'
+  'main': '𝐈𝐍𝐅𝐎',
+  'search': '𝐒𝐄𝐀𝐑𝐂𝐇',
+  'dl': '𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐒',
+  'tools': '𝐓𝐎𝐎𝐋𝐒',
+  'sticker': '𝐒𝐓𝐈𝐂𝐊𝐄𝐑𝐒',
+  'owner': '𝐂𝐑𝐄𝐀𝐃𝐎𝐑',
 }
-
-    
 
 const defaultMenu = {
   before: `
 ╭─────────────┈⊷
-│  「 𝗜𝗡𝗙𝗢 - 𝗕𝗢𝗧 」
+│  「 𝗜𝗡𝗙𝗢 - 𝗕𝗢𝗧 」
 ╰┬────────────┈⊷
 ┌┤ *✨ 𝑴𝒐𝒅𝒐* : Público
 │ *🌹 𝑩𝒂𝒊𝒍𝒆𝒚𝒔* : Multi Device
@@ -27,10 +24,10 @@ const defaultMenu = {
 ╰────────────┈⊷
 %readmore
 ╭─────────────┈⊷
-│   「 𝗜𝗡𝗙𝗢 𝗨𝗦𝗘𝗥𝗦 」
+│   「 𝗜𝗡𝗙𝗢 𝗨𝗦𝗘𝗥𝗦 」
 ╰┬────────────┈⊷
 ┌┤ *📌 𝑵𝒐𝒎𝒃𝒓𝒆* : %name
-│ *🪙 𝑵𝒊𝒍𝒐𝑪𝒐𝒊𝒏𝒔* : %limit
+│ *🪙 𝑵𝒊𝒍𝒐𝒖𝑪𝒐𝒊𝒏𝒔* : %limit
 │ *🪷 𝑵𝒊𝒗𝒆𝒍* : %level
 │ *🌸 𝑿𝑷* : %totalexp
 ╰────────────┈⊷
@@ -38,45 +35,38 @@ const defaultMenu = {
 
 \t\t\t*𝗖 𝗢 𝗠 𝗠 𝗔 𝗡 𝗗 𝗦*
 `.trimStart(),
-  header: '╭────── ✾ ────── \n│   *`「 %category 」`*\n╰┬─━━━━━━⊱✿⊰━━━━━━─\n┌┤', 
+  header: '╭────── ✾ ────── \n│   *`「 %category 」`*\n╰┬─━━━━━━⊱✿⊰━━━━━━─\n┌┤', 
   body: '│ %cmd %islimit %isPremium\n',
   footer: '╰━━━━━━ • ✿ • ━━━━━━\n',
   after: ``,
 }
 
-const loadTranslations = async (language) => {
-  const translations = await promises.readFile(join(__dirname, `../idiomas/${language}.json`), 'utf-8')
-  return JSON.parse(translations)
-}
-
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   try {
-    const { exp, limit, level } = global.db.data.users[m.sender]
-    const { min, xp, max } = xpRange(level, global.multiplier)
-    const name = await conn.getName(m.sender)
-    const d = new Date(new Date() + 3600000)
-    const language = global.db.data.users[m.sender].language || 'es'
-    const translations = await loadTranslations(language)
-    const locale = language
-
-    const weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
-    const week = d.toLocaleDateString(locale, { weekday: 'long' })
-    const date = d.toLocaleDateString(locale, {
+    let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
+    let { exp, limit, level } = global.db.data.users[m.sender]
+    let { min, xp, max } = xpRange(level, global.multiplier)
+    let name = await conn.getName(m.sender)
+    let d = new Date(new Date + 3600000)
+    let locale = 'es'
+    let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
+    let week = d.toLocaleDateString(locale, { weekday: 'long' })
+    let date = d.toLocaleDateString(locale, {
       day: 'numeric',
       month: 'long',
       year: 'numeric'
     })
-    const dateIslamic = Intl.DateTimeFormat(locale + '-TN-u-ca-islamic', {
+    let dateIslamic = Intl.DateTimeFormat(locale + '-TN-u-ca-islamic', {
       day: 'numeric',
       month: 'long',
       year: 'numeric'
     }).format(d)
-    const time = d.toLocaleTimeString(locale, {
+    let time = d.toLocaleTimeString(locale, {
       hour: 'numeric',
       minute: 'numeric',
       second: 'numeric'
     })
-    const _uptime = process.uptime() * 1000
+    let _uptime = process.uptime() * 1000
     let _muptime
     if (process.send) {
       process.send('uptime')
@@ -85,12 +75,11 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
         setTimeout(resolve, 1000)
       }) * 1000
     }
-    const muptime = clockString(_muptime)
-    const uptime = clockString(_uptime)
-    const totalreg = Object.keys(global.db.data.users).length
-    const rtotalreg = Object.values(global.db.data.users).filter(user => user.registered).length
-
-    const help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
+    let muptime = clockString(_muptime)
+    let uptime = clockString(_uptime)
+    let totalreg = Object.keys(global.db.data.users).length
+    let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
+    let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
       return {
         help: Array.isArray(plugin.tags) ? plugin.help : [plugin.help],
         tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],
@@ -100,23 +89,17 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
         enabled: !plugin.disabled,
       }
     })
-
-    for (const plugin of help) {
-      if (plugin && 'tags' in plugin) {
-        for (const tag of plugin.tags) {
+    for (let plugin of help)
+      if (plugin && 'tags' in plugin)
+        for (let tag of plugin.tags)
           if (!(tag in tags) && tag) tags[tag] = tag
-        }
-      }
-    }
-
-    conn.menu = conn.menu || {}
-    const before = translations.menu.before || defaultMenu.before
-    const header = translations.menu.header || defaultMenu.header
-    const body = translations.menu.body || defaultMenu.body
-    const footer = translations.menu.footer || defaultMenu.footer
-    const after = translations.menu.after || defaultMenu.after
-
-    const _text = [
+    conn.menu = conn.menu ? conn.menu : {}
+    let before = conn.menu.before || defaultMenu.before
+    let header = conn.menu.header || defaultMenu.header
+    let body = conn.menu.body || defaultMenu.body
+    let footer = conn.menu.footer || defaultMenu.footer
+    let after = conn.menu.after || (conn.user.jid == global.conn.user.jid ? '' : ``) + defaultMenu.after
+    let _text = [
       before,
       ...Object.keys(tags).map(tag => {
         return header.replace(/%category/g, tags[tag]) + '\n' + [
@@ -133,73 +116,86 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       }),
       after
     ].join('\n')
-
-    const text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ? _text : ''
-    const replace = {
+    let text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ? _text : ''
+    let replace = {
       '%': '%',
-      p: _p,
-      uptime,
-      muptime,
+      p: _p, uptime, muptime,
       taguser: '@' + m.sender.split("@s.whatsapp.net")[0],
       wasp: '@0',
       me: conn.getName(conn.user.jid),
-      npmname: translations.package.name,
-      version: translations.package.version,
-      npmdesc: translations.package.description,
-      npmmain: translations.package.main,
-      author: translations.package.author.name,
-      license: translations.package.license,
+      npmname: _package.name,
+      version: _package.version,
+      npmdesc: _package.description,
+      npmmain: _package.main,
+      author: _package.author.name,
+      license: _package.license,
       exp: exp - min,
       maxexp: xp,
       totalexp: exp,
       xp4levelup: max - exp,
-      github: translations.package.homepage ? translations.package.homepage.url || translations.package.homepage : '[unknown github url]',
-      greeting,
-      level,
-      limit,
-      name,
-      weton,
-      week,
-      date,
-      dateIslamic,
-      time,
-      totalreg,
-      rtotalreg,
+      github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
+      greeting, level, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg,
       readmore: readMore
     }
-
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-    const img = 'https://telegra.ph/file/c20bb077a71d364dfb118.jpg'
-    await conn.sendFile(m.chat, img, 'thumbnail.jpg', text.trim(), m, null, rcanal)
+
+/*let pp = `https://telegra.ph/file/c20bb077a71d364dfb118.jpg`
+let pp2 = `https://telegra.ph/file/c20bb077a71d364dfb118.jpg`
+    await m.react('💙')
+    await conn.sendMessage(m.chat, { video: { url: [ pp, pp2 ].getRandom() }, gifPlayback: true, caption: text.trim(), mentions: [m.sender] }, { quoted: m })*/
+
+let img = 'https://telegra.ph/file/c20bb077a71d364dfb118.jpg'
+    
+   await conn.sendFile(m.chat, img, 'thumbnail.jpg', text.trim(), m, null, rcanal)
+   //await conn.sendSP(m.chat, botname, null, text.trim(), img, img, null, m)
 
   } catch (e) {
-    conn.reply(m.chat, '❎ ' + translations.errors.menu, m)
+    conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error.', m)
     throw e
   }
 }
 
-handler.command = ['menu', 'help', 'menú']
+handler.command = ['menu', 'help', 'menú'] 
 export default handler
+
 
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 
 function clockString(ms) {
-  const h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
-  const m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
-  const s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
   return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
 }
 
-const greeting = (hour => {
-  switch (hour) {
-    case 0: case 1: case 2: return 'una linda noche 🌙'
-    case 3: case 4: case 5: case 6: case 7: case 8: case 9: return 'una linda mañana'case 10: case 11: case 12: return 'un lindo día 🌞'
-    case 13: case 14: return 'una linda tarde 🌇'
-    case 15: case 16: case 17: return 'una linda tarde 🥀'
-    case 18: case 19: case 20: return 'una linda noche 🌃'
-    case 21: case 22: case 23: return 'una linda noche 🌙'
-    default: return 'un buen día'
-  }
-})(new Date().getHours())
+  var ase = new Date();
+  var hour = ase.getHours();
+switch(hour){
+  case 0: hour = 'una linda noche 🌙'; break;
+  case 1: hour = 'una linda noche 💤'; break;
+  case 2: hour = 'una linda noche 🦉'; break;
+  case 3: hour = 'una linda mañana ✨'; break;
+  case 4: hour = 'una linda mañana 💫'; break;
+  case 5: hour = 'una linda mañana 🌅'; break;
+  case 6: hour = 'una linda mañana 🌄'; break;
+  case 7: hour = 'una linda mañana 🌅'; break;
+  case 8: hour = 'una linda mañana 💫'; break;
+  case 9: hour = 'una linda mañana ✨'; break;
+  case 10: hour = 'un lindo dia 🌞'; break;
+  case 11: hour = 'un lindo dia 🌨'; break;
+  case 12: hour = 'un lindo dia ❄'; break;
+  case 13: hour = 'un lindo dia 🌤'; break;
+  case 14: hour = 'una linda tarde 🌇'; break;
+  case 15: hour = 'una linda tarde 🥀'; break;
+  case 16: hour = 'una linda tarde 🌹'; break;
+  case 17: hour = 'una linda tarde 🌆'; break;
+  case 18: hour = 'una linda noche 🌙'; break;
+  case 19: hour = 'una linda noche 🌃'; break;
+  case 20: hour = 'una linda noche 🌌'; break;
+  case 21: hour = 'una linda noche 🌃'; break;
+  case 22: hour = 'una linda noche 🌙'; break;
+  case 23: hour = 'una linda noche 🌃'; break;
+}
+  var greeting = "espero que tengas " + hour;
