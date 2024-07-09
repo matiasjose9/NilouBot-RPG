@@ -10,6 +10,7 @@ let tags = {
   'tools': 'TOOLS',
   'sticker': 'STICKERS',
   'owner': 'OWNERS',
+  'nilou': 'NILOU-INFO'
 }
 
     
