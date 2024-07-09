@@ -1,7 +1,13 @@
 import Starlights from '@StarlightsTeam/Scraper'
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-if (!args[0]) return conn.reply(m.chat, '*`Ingresa el enlace del vídeo de Instagram junto al comando.`*', m)
+
+        const data = global;
+        const idioma = data.db.data.users[m.sender].language;
+        const _translate = JSON.parse(fs.readFileSync(`./idiomas/${idioma}.json`, 'utf8'));
+        const traductor = _translate.plugins._descargas;
+
+if (!args[0]) return conn.reply(m.chat, `${traductor.texto1}`, m)
 try {
 let { dl_url } = await Starlights.igdl(args[0])
 await conn.sendFile(m.chat, dl_url, 'igdl.mp4', null, m, null, rcanal)
