@@ -1,25 +1,23 @@
 let isInsultlinkEnabled = true;
 
-let handleInsultlinkCommand = async (m, { command }) => {
+let handler = async (m, { conn, text }) => {
+    const command = text.trim().toLowerCase();
+
     if (command === 'off insultlink') {
         isInsultlinkEnabled = false;
-        m.reply('insultlink desactivado');
+        return conn.reply(m.chat, 'insultlink desactivado', m);
     } else if (command === 'on insultlink') {
         isInsultlinkEnabled = true;
-        m.reply('insultlink activado');
+        return conn.reply(m.chat, 'insultlink activado', m);
     }
-}
 
-let handler = async (m, { conn }) => {
     if (!isInsultlinkEnabled) {
         return;
     }
 
     const linkRegex = /https?:\/\/[^\s]+/gi;
-
     const groupLink = "https://chat.whatsapp.com/IICmKudSbuGBFKMPZitp0h";
     const channelLink = "https://whatsapp.com/channel/0029VajIId22phHQLslZah1n";
-
     const insults = [
         "`Hey bro, no envíes links de mierda.`",
         "`No me vengas con tus enlaces basura.`",
@@ -41,8 +39,7 @@ let handler = async (m, { conn }) => {
     }
 }
 
-handler.command = /^(on|off) insultlink$/i;
 handler.customPrefix = /https?:\/\/[^\s]+/i;
-handler.group = true;
+handler.command = new RegExp;
 
-export default { handler, handleInsultlinkCommand };
+export default handler;
