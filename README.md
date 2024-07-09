@@ -5,7 +5,6 @@
 </div>
 <br>
 <div align="center">
-<a href="https://tinyurl.com/Sylpha">
   <img title="WhatsApp-Bot-MD" src="https://img.shields.io/badge/-WHATSAPP--BOT--MD-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge">
 </a>
 <br>
