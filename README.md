@@ -1,4 +1,4 @@
-<h1 align="center">♡ 𝚂𝚢𝚕𝚙𝚑𝚊-𝙼𝙳 ♡</h1>
+<h1 align="center">`NilouBotLite-MD`</h1>
 <br>
 <div align="center">
 
