@@ -1,7 +1,7 @@
 let isInsultlinkEnabled = true;
 
 let handler = async (m, { conn, text }) => {
-    
+    const command = text.trim().toLowerCase();
 
     if (command === 'off insultlink') {
         isInsultlinkEnabled = false;
@@ -15,27 +15,31 @@ let handler = async (m, { conn, text }) => {
         return;
     }
 
-    const linkRegex = /https?:\/\/[^\s]+/gi;
-    const groupLink = "https://chat.whatsapp.com/IICmKudSbuGBFKMPZitp0h";
-    const channelLink = "https://whatsapp.com/channel/0029VajIId22phHQLslZah1n";
-    const insults = [
-        "`Hey bro, no envíes links de mierda.`",
-        "`No me vengas con tus enlaces basura.`",
-        "`¿Qué crees que haces enviando esos links?`",
-        "`Deja de enviar esos enlaces inútiles.`",
-        "`Tus links no son bienvenidos aquí.`"
-    ];
+    try {
+        const linkRegex = /https?:\/\/[^\s]+/gi;
+        const groupLink = "https://chat.whatsapp.com/IICmKudSbuGBFKMPZitp0h";
+        const channelLink = "https://whatsapp.com/channel/0029VajIId22phHQLslZah1n";
+        const insults = [
+            "`Hey bro, no envíes links de mierda.`",
+            "`No me vengas con tus enlaces basura.`",
+            "`¿Qué crees que haces enviando esos links?`",
+            "`Deja de enviar esos enlaces inútiles.`",
+            "`Tus links no son bienvenidos aquí.`"
+        ];
 
-    let links = m.text.match(linkRegex);
-    if (links) {
-        for (let link of links) {
-            if (link.includes(groupLink) || link.includes(channelLink)) {
-                conn.reply(m.chat, "Detecte un link de mis enlaces oficiales\n\nEspero estés en el grupo oficial del bot y que me esté siguiendo en mi canal de WhatsApp.", m);
-            } else {
-                let randomInsult = insults[Math.floor(Math.random() * insults.length)];
-                conn.reply(m.chat, randomInsult, m);
+        let links = m.text.match(linkRegex);
+        if (links) {
+            for (let link of links) {
+                if (link.includes(groupLink) || link.includes(channelLink)) {
+                    conn.reply(m.chat, "Detecte un link de mis enlaces oficiales\n\nEspero estés en el grupo oficial del bot y que me esté siguiendo en mi canal de WhatsApp.", m);
+                } else {
+                    let randomInsult = insults[Math.floor(Math.random() * insults.length)];
+                    conn.reply(m.chat, randomInsult, m);
+                }
             }
         }
+    } catch (error) {
+        conn.reply(m.chat, `Error: ${error.message}`, m);
     }
 }
 
