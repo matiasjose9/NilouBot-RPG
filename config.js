@@ -41,7 +41,7 @@ global.catalogo = fs.readFileSync('./storage/img/catalogo.png')
 global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: botname, orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
 
 
-global.canal = 'https://whatsapp.com/channel/0029VaeQcFXEFeXtNMHk0D0n'
+global.canal = 'https://whatsapp.com/channel/0029VajIId22phHQLslZah1n'
 
 
 
