@@ -49,7 +49,7 @@ const handler = async (m, { conn, args, command, usedPrefix }) => {
         const datTa = await instagram.download(args[0]);
         for (const urRRl of datTa) {
           const shortUrRRl = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
-          const tXXxt = `${tradutor.texto2} _${shortUrRRl}_`.trim();
+          const tXXxt = `${tradutor.texto1} _${shortUrRRl}_`.trim();
           await conn.sendFile(m.chat, urRRl.url, 'error.mp4', tXXxt, m);
           await new Promise((resolve) => setTimeout(resolve, 10000));
         }
@@ -58,14 +58,14 @@ const handler = async (m, { conn, args, command, usedPrefix }) => {
         try {
           const resultss = await instagramGetUrl(args[0]);
           const shortUrl2 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
-          const txt2 = `${tradutor.texto2} _${shortUrl2}_`.trim();
+          const txt2 = `${tradutor.texto1} _${shortUrl2}_`.trim();
           await conn.sendFile(m.chat, resultss.url_list[0], 'error.mp4', txt2, m);
         } catch (err) {
           console.error('Error en instagramGetUrl:', err.message);
           try {
             const resultssss = await instagramdl(args[0]);
             const shortUrl3 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
-            const txt4 = `${tradutor.texto2} _${shortUrl3}_`.trim();
+            const txt4 = `${tradutor.texto1} _${shortUrl3}_`.trim();
             for (const { url } of resultssss) await conn.sendFile(m.chat, url, 'error.mp4', txt4, m);
           } catch (err) {
             console.error('Error en instagramdl:', err.message);
@@ -74,11 +74,11 @@ const handler = async (m, { conn, args, command, usedPrefix }) => {
               const json = await human.json();
               const videoig = json.result;
               const shortUrl1 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
-              const txt1 = `${tradutor.texto2} _${shortUrl1}_`.trim();
+              const txt1 = `Prueba _${shortUrl1}_`.trim();
               await conn.sendFile(m.chat, videoig, 'error.mp4', txt1, m);
             } catch (err) {
               console.error('Error en lolhuman API:', err.message);
-              throw `${tradutor.texto3}`;
+              throw `Error`;
             }
           }
         }
