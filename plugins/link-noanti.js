@@ -1,5 +1,4 @@
 let handler = async (m, { conn }) => {
-
     const linkRegex = /https?:\/\/[^\s]+/gi;
 
     const groupLink = "https://chat.whatsapp.com/IICmKudSbuGBFKMPZitp0h";
@@ -15,13 +14,17 @@ let handler = async (m, { conn }) => {
 
     let links = m.text.match(linkRegex);
     if (links) {
+        let isOfficialLink = false;
         for (let link of links) {
             if (link.includes(groupLink) || link.includes(channelLink)) {
-                conn.reply(m.chat, "Detecte un link de mis enlaces oficiales\n\nEspero estés en el grupo oficial del bot y que me esté siguiendo en mi canal de WhatsApp.", m, rcanal);
-            } else {
-                let randomInsult = insults[Math.floor(Math.random() * insults.length)];
-                conn.reply(m.chat, randomInsult, m, rcanal);
+                isOfficialLink = true;
+                conn.reply(m.chat, "Detecté un enlace de mis enlaces oficiales.\n\nEspero estés en el grupo oficial del bot y que me estés siguiendo en mi canal de WhatsApp.", m, rcanal);
+                break;
             }
+        }
+        if (!isOfficialLink) {
+            let randomInsult = insults[Math.floor(Math.random() * insults.length)];
+            conn.reply(m.chat, randomInsult, m, rcanal);
         }
     }
 }
