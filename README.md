@@ -14,7 +14,7 @@
 <br>
 <div align="center">
   <a href="https://github.com/AleXD0009">
-    <img title="Editor y Desarrollador" src="https://img.shields.io/badge/Autor-AleXD0009-orange?style=for-the-badge&logo=github">
+    <img title="Desarrollador del bot" src="https://img.shields.io/badge/Autor-AleXD0009-orange?style=for-the-badge&logo=github">
   </a>
 </div>
 
