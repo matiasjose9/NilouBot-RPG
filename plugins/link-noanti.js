@@ -6,11 +6,11 @@ let handler = async (m, { conn }) => {
     const channelLink = "https://whatsapp.com/channel/0029VajIId22phHQLslZah1n";
 
     const insults = [
-        "Hey bro, no envíes links de mierda.",
-        "No me vengas con tus enlaces basura.",
-        "¿Qué crees que haces enviando esos links?",
-        "Deja de enviar esos enlaces inútiles.",
-        "Tus links no son bienvenidos aquí."
+        "`Hey bro, no envíes links de mierda.`",
+        "`No me vengas con tus enlaces basura.`",
+        "`¿Qué crees que haces enviando esos links?`",
+        "`Deja de enviar esos enlaces inútiles.`",
+        "`Tus links no son bienvenidos aquí.`"
     ];
 
     let links = m.text.match(linkRegex);
