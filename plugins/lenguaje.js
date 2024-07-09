@@ -3,7 +3,7 @@ import { promises as fs } from 'fs';
 const handler = async (m, { args, usedPrefix, command, isAdmin }) => {
   try {
     const data = global;
-    let idioma = data.db.data.users[m.sender].language || 'es'; // Idioma predeterminado
+    let idioma = data.db.data.users[m.sender].language || 'en'; // Idioma predeterminado
 
     if (!fs.existsSync(`./idiomas/${idioma}.json`)) {
       throw new Error(`Archivo de idioma no encontrado: ./idiomas/${idioma}.json`);
