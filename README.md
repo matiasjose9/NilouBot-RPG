@@ -51,6 +51,8 @@ Para nuevos desde cero en termux.apk:
 > npm start
 ```
 ### 𝘾𝙤𝙡𝙖𝙗𝙤𝙧𝙖𝙙𝙤𝙧𝙚𝙨
-<a href="https://github.com/davidprospero123"><img src="https://i.pinimg.com/564x/37/cc/f0/37ccf0b5f91c7450d45980f274fd49c2.jpg" width="200" height="200" alt="Gabriel Curi"/></a>
+<a href="https://github.com/matias-crypto"><img src="https://i.pinimg.com/564x/37/cc/f0/37ccf0b5f91c7450d45980f274fd49c2.jpg" width="200" height="200" alt="matias-crypto"/></a>
+
+
 
 
