@@ -18,6 +18,6 @@ ${traductor.texto2.map(item => item)}
     }
 };
 
-handler.command = /^(sal)$/i;
+handler.command = /^(nilou)$/i;
 
 export default handler;
