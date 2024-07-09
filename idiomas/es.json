@@ -1,25 +1,18 @@
 {
-  "menu": {
-    "before": "╭─────────────┈⊷\n│  「 𝗜𝗡𝗙𝗢 - 𝗕𝗢𝗧 」\n╰┬────────────┈⊷\n┌┤ *✨ 𝑴𝒐𝒅𝒐* : Público\n│ *🌹 𝑩𝒂𝒊𝒍𝒆𝒚𝒔* : Multi Device\n│ *⏰ 𝑻𝒊𝒆𝒎𝒑𝒐 𝑨𝒄𝒕𝒊𝒗𝒐* : %muptime\n│ *👤 𝑼𝒔𝒖𝒂𝒓𝒊𝒐𝒔* : %totalreg\n╰────────────┈⊷\n%readmore\n╭─────────────┈⊷\n│   「 𝗜𝗡𝗙𝗢 𝗨𝗦𝗘𝗥𝗦 」\n╰┬────────────┈⊷\n┌┤ *📌 𝑵𝒐𝒎𝒃𝒓𝒆* : %name\n│ *🪙 𝑵𝒊𝒍𝒐𝑪𝒐𝒊𝒏𝒔* : %limit\n│ *🪷 𝑵𝒊𝒗𝒆𝒍* : %level\n│ *🌸 𝑿𝑷* : %totalexp\n╰────────────┈⊷\n%readmore\n\n\t\t\t*𝗖 𝗢 𝗠 𝗠 𝗔 𝗡 𝗗 𝗦*\n",
-    "header": "╭────── ✾ ────── \n│   *`「 %category 」`*\n╰┬─━━━━━━⊱✿⊰━━━━━━─\n┌┤", 
-    "body": "│ %cmd %islimit %isPremium\n",
-    "footer": "╰━━━━━━ • ✿ • ━━━━━━\n",
-    "after": ""
-  },
-  "errors": {
-    "menu": "Lo sentimos, el menú tiene un error."
-  },
-  "package": {
-    "name": "Nombre del paquete",
-    "version": "Versión",
-    "description": "Descripción",
-    "main": "Principal",
-    "author": {
-      "name": "Autor"
-    },
-    "license": "Licencia",
-    "homepage": {
-      "url": "URL de la página principal"
+  "plugins": {
+    "_language": {
+      "texto1": [
+        "Por favor, use uno de los siguientes idiomas:",
+        "Ejemplo:",
+        "Idioma no soportado.",
+        "El idioma actual es"
+      ],
+      "texto2": [
+        "Por favor, use uno de los siguientes idiomas:",
+        "Ejemplo:"
+      ],
+      "texto3": "Este comando solo se puede usar en grupos.",
+      "texto4": "Necesitas ser administrador para cambiar el idioma del grupo."
     }
   }
 }
