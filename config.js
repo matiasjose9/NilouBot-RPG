@@ -29,7 +29,7 @@ global.author = '@ 2024 JTxs | All rigths reserved'
 global.botname = 'Nilou - Bot - Lite'
 
 global.name_canal = '@ 2024 Enzo | All rigths reserved'
-global.id_canal = '120363274577422945@newsletter'
+global.id_canal = '120363314585338428@newsletter'
 
 
 
