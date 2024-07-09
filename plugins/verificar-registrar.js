@@ -18,14 +18,13 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   user.registered = true
   let sn = createHash('md5').update(m.sender).digest('hex')
   m.reply(`
-┏━━━━━━━━━━━━━━━━┓
->  *𝑹𝑬𝑮𝑰𝑺𝑻𝑹𝑶 * 
-┃━━━━━━⊱✿⊰━━━━━━┛
+-----------------
+> *𝑹𝑬𝑮𝑰𝑺𝑻𝑹𝑶* 
+-----------------
 > *𝑵𝑶𝑴𝑩𝑹𝑬:* ${name}
 > *𝑬𝑫𝑨𝑫* : ${age} años
 > *𝑵𝑼𝑴𝑬𝑹𝑶 𝑫𝑬 𝑺𝑬𝑹𝑰𝑬*:
 > ${sn}
-┃━━━━━━━━━━━━━━━  
 > Use *${usedPrefix}menu* para ver el menu de comandos
 ┗--------------------------
 `.trim())
