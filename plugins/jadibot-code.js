@@ -141,6 +141,7 @@ handler.tags = ['JADIBOT'];
 handler.command = ['code'];
 handler.register = true;
 handler.private = true;
+handler.rowner = true;
 export default handler;
 function sleep(ms) {
 return new Promise(resolve => setTimeout(resolve, ms));
