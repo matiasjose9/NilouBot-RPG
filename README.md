@@ -53,7 +53,7 @@ Para nuevos desde cero en termux.apk:
 > yarn install 
 > npm start
 ```
-### 𝘾𝙤𝙡𝙖𝙗𝙤𝙧𝙖𝙙𝙤𝙧𝙚𝙨
+### > 𝘾𝙤𝙡𝙖𝙗𝙤𝙧𝙖𝙙𝙤𝙧𝙚𝙨
 <a href="https://github.com/matias-crypto"><img src="https://telegra.ph/file/79b4b4c78279caf927fd7.jpg" width="200" height="200" alt="matias-crypto"/></a>
 
 
