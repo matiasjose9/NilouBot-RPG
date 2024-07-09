@@ -22,10 +22,10 @@ const handler = async (m, { args, usedPrefix, command, isAdmin }) => {
     if (command === 'lang') {
       if (sigla === 'es') {
         global.db.data.users[m.sender].language = 'es'
-        m.reply(`*[ ✅ ] Nilou - Bot*\n\n*—◉* *_Idioma definido a Español 🇪🇸_*`)
+        m.reply(`> *Nilou - Bot*\n\n*_Idioma definido a Español 🇪🇸_*`)
       } else if (sigla === 'en') {
         global.db.data.users[m.sender].language = 'en'
-        m.reply(`*[ ✅ ] Nilou - Bot*\n\n*—◉* *_Idioma definido a Inglés 🇬🇧_*`)
+        m.reply(`> *Nilou - Bot*\n\n*_Idioma definido a Inglés 🇬🇧_*`)
       } else {
         m.reply(`
 ${tradutor.texto1[2]}
