@@ -12,9 +12,9 @@ let handler = async (m, { conn }) => {
         for (let link of links) {
             
             if (link.includes(groupLink) || link.includes(channelLink)) {
-                conn.reply(m.chat, "Muy bien hecho, seguiste un gran camino, de paso sígueme en mi canal de WhatsApp y únete al grupo", m);
+                conn.reply(m.chat, "Detecte un link de mis enlaces oficiales\n\nEspero estés en el grupo oficial del bot y que me este siguiendo en mi canal de WhatsApp ", m);
             } else {
-                conn.reply(m.chat, "Hey bro, no envíes links de mierda", m);
+                conn.reply(m.chat, "`Hey bro, no envíes links de mierda`", m);
             }
         }
     }
