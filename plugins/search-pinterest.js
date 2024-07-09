@@ -11,5 +11,5 @@ m.react(done)
 }}
 handler.help = ['pinteres <texto>']
 handler.tags = ['tools']
-handler.command = ['pinterest']
+handler.command = ['pinteres']
 export default handler
