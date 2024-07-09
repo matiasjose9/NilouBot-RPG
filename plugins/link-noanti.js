@@ -3,7 +3,7 @@ let handler = async (m, { conn }) => {
     const linkRegex = /https?:\/\/[^\s]+/gi;
 
     
-    const groupLink = "https://chat.whatsapp.com/tu-grupo";
+    const groupLink = "https://chat.whatsapp.com/IICmKudSbuGBFKMPZitp0h";
     const channelLink = "https://whatsapp.com/channel/0029VajIId22phHQLslZah1n";
 
     
