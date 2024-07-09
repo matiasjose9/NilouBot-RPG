@@ -1,24 +1,40 @@
 import axios from 'axios';
-const { generateWAMessageContent, generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default;
+import { generateWAMessageContent, generateWAMessageFromContent, proto } from '@whiskeysockets/baileys';
 
 let handler = async (message, { conn, text, usedPrefix, command }) => {
-    if (!text) return message.reply('*`Ingresa el texto de lo que quieres buscar en pinterest`*');
-
-    async function generateImageMessage(imageUrl) {
-        const { imageMessage } = await generateWAMessageContent({ 'image': { 'url': imageUrl } }, { 'upload': conn.waUploadToServer });
-        return imageMessage;
+    if (!text) {
+        await message.reply('*`Ingresa el texto de lo que quieres buscar en Pinterest`*');
+        return;
     }
 
-    function shuffleArray(array) {
+    const generateImageMessage = async (imageUrl) => {
+        try {
+            const { imageMessage } = await generateWAMessageContent({ 'image': { 'url': imageUrl } }, { 'upload': conn.waUploadToServer });
+            return imageMessage;
+        } catch (error) {
+            console.error('Error generando el mensaje de imagen:', error);
+            return null;
+        }
+    };
+
+    const shuffleArray = (array) => {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
         }
-    }
+    };
 
     let cards = [];
-    const response = await axios.get(`https://www.pinterest.com/resource/BaseSearchResource/get/?source_url=/search/pins/?rs=typed&q=${text}&data=%7B%22options%22%3A%7B%22isPrefetch%22%3Afalse%2C%22query%22%3A%22${text}%22%2C%22scope%22%3A%22pins%22%2C%22no_fetch_context_on_resource%22%3Afalse%7D%2C%22context%22%3A%7B%7D%7D&_=1596199803015`);
-    const pinResults = response.data.resource_response.data.results.map(result => result.images.orig.url);
+    let pinResults = [];
+
+    try {
+        const response = await axios.get(`https://www.pinterest.com/resource/BaseSearchResource/get/?source_url=/search/pins/?rs=typed&q=${encodeURIComponent(text)}&data=%7B%22options%22%3A%7B%22isPrefetch%22%3Afalse%2C%22query%22%3A%22${encodeURIComponent(text)}%22%2C%22scope%22%3A%22pins%22%2C%22no_fetch_context_on_resource%22%3Afalse%7D%2C%22context%22%3A%7B%7D%7D&_=1596199803015`);
+        pinResults = response.data.resource_response.data.results.map(result => result.images.orig.url);
+    } catch (error) {
+        console.error('Error obteniendo resultados de Pinterest:', error);
+        await message.reply('Hubo un error al buscar en Pinterest.');
+        return;
+    }
 
     shuffleArray(pinResults);
 
@@ -26,19 +42,22 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
     let index = 1;
 
     for (let pin of topPins) {
-        cards.push({
-            'body': proto.Message.ImageMessage.encode({ 'text': `Pinterest 🔍\n${index++}` }),
-            'footer': proto.Message.Footer.encode({ 'text': '@Enzo 2024 | All rights reserved' }),
-            'header': proto.Message.Header.encode({ 'title': '', 'hasMediaAttachment': true, 'imageMessage': await generateImageMessage(pin) }),
-            'nativeFlowMessage': proto.Message.NativeFlow.encode({
-                'buttons': [
-                    {
-                        'name': 'Pinterest',
-                        'buttonParamsJson': `{"display_text":"url 🔍","url":"${pin}"}`
-                    }
-                ]
-            })
-        });
+        let imageMessage = await generateImageMessage(pin);
+        if (imageMessage) {
+            cards.push({
+                'body': proto.Message.ImageMessage.encode({ 'text': `Pinterest 🔍\n${index++}` }),
+                'footer': proto.Message.Footer.encode({ 'text': '@whiskeysockets 2024 | All rights reserved' }),
+                'header': proto.Message.Header.encode({ 'title': '', 'hasMediaAttachment': true, 'imageMessage': imageMessage }),
+                'nativeFlowMessage': proto.Message.NativeFlow.encode({
+                    'buttons': [
+                        {
+                            'name': 'Pinterest',
+                            'buttonParamsJson': `{"display_text":"url 🔍","url":"${pin}"}`
+                        }
+                    ]
+                })
+            });
+        }
     }
 
     const messageContent = generateWAMessageFromContent(message.key.remoteJid, {
@@ -55,7 +74,11 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
         }
     }, { quoted: message });
 
-    await conn.relayMessage(message.key.remoteJid, messageContent.message, { messageId: messageContent.key.id });
+    try {
+        await conn.relayMessage(message.key.remoteJid, messageContent.message, { messageId: messageContent.key.id });
+    } catch (error) {
+        console.error('Error enviando el mensaje:', error);
+    }
 };
 
 handler.help = ['pinterest'];
