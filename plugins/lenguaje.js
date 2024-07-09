@@ -1,3 +1,5 @@
+//Adaptación y mejora del multilenguaje de The Mystic
+
 import fs from 'fs'
 
 const handler = async (m, { args, usedPrefix, command, isAdmin }) => {
