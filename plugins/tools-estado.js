@@ -50,7 +50,7 @@ conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )}
 
 }
 handler.help = ['estado', 'status']
-handler.tags = ['bot']
+handler.tags = ['tools']
 handler.command = /^status|statusbot|botstatus|estado$/i
 
 handler.register = true
