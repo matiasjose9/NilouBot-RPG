@@ -13,20 +13,20 @@
       ],
       "texto3": "Este comando solo se puede usar en grupos.",
       "texto4": "Necesitas ser administrador para cambiar el idioma del grupo.",
-      "saludo": "Hola cómo estás"
+      "saludo": "Hola, ¿cómo estás?"
     },
     "_general": {
       "texto1": "`NilouBot-Lite`",
       "texto2": [
         "Soy NilouBot-Lite, un bot de WhatsApp multi-dispositivo",
         "Fui creado por matias-crypto y Enzo",
-    "Me han creado con el propósito de ayudar a las personas a descargar videos de Instagram, Facebook, etc.",
-   "Soy un simple bot pero pronto tendré muchas más funciones, créeme 🤗"
+        "Me han creado con el propósito de ayudar a las personas a descargar videos de Instagram, Facebook, etc.",
+        "Soy un simple bot pero pronto tendré muchas más funciones, créeme 🤗"
       ],
-   "texto3": "> Información sobre mi"
+      "texto3": "> Información sobre mí"
     },
-  "_descargas": {
-  "texto1": "Ingresa un link, ejemplo"
+    "_descargas": {
+      "texto1": "Ingresa un link, ejemplo"
     }
   }
 }
