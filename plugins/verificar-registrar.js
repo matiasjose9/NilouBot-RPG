@@ -1,7 +1,14 @@
+import fs from 
 import { createHash } from 'crypto'
 let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
 let handler = async function (m, { conn, text, usedPrefix, command }) {
   let user = global.db.data.users[m.sender]
+
+        const data = global;
+        const idioma = data.db.data.users[m.sender].language;
+        const _translate = JSON.parse(fs.readFileSync(`./idiomas/${idioma}.json`, 'utf8'));
+        const traductor = _translate.plugins._general;
+
   let name2 = conn.getName(m.sender)
   if (user.registered === true) throw `🚫 𝐄𝐑𝐑𝐎𝐑 🚫 *Ya ᥱs𝗍ᥲ́s registrado*\n\n¿Quiere registrarse de vuelta?\n\n💬 Use el siguiente comando*\n*${usedPrefix}unreg* <Numero de serie>`
   if (!Reg.test(text)) throw `🚫 𝐄𝐑𝐑𝐎𝐑 🚫 *Forma incorrecta*\n\n📝 Uso correcto Del Comando: *${usedPrefix + command} nombre.edad*\n [ 💡 ] Ejemplo : *${usedPrefix + command}* ${name2}.18`
