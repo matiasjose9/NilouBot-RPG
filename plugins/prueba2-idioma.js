@@ -9,6 +9,7 @@ const handler = async (m) => {
 
         const info = `
 ${traductor.texto1}\n
+${traductor.texto3}\n
 ${traductor.texto2.map(item => item)}
 `;
 
