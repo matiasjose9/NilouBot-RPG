@@ -1,6 +1,4 @@
-<h1 align="center">`NilouBotLite-MD`</h1>
-<br>
-<div align="center">
+### `NilouBotLite-MD`
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=0000FF&width=435&lines=Bienvenido+al+Bot+de+WhatsApp+Multidevice;Gracias+por+preferir+Sylpha-Bot)](https://git.io/typing-svg)
 <img src="https://c.tenor.com/1TZFlVALQO4AAAAd/tenor.gif" width="400" height="230"/>
