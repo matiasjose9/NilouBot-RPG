@@ -1,4 +1,19 @@
+let isInsultlinkEnabled = true;
+
+let handleInsultlinkCommand = async (m, { command }) => {
+    if (command === 'off insultlink') {
+        isInsultlinkEnabled = false;
+        m.reply('insultlink desactivado');
+    } else if (command === 'on insultlink') {
+        isInsultlinkEnabled = true;
+        m.reply('insultlink activado');
+    }
+}
+
 let handler = async (m, { conn }) => {
+    if (!isInsultlinkEnabled) {
+        return;
+    }
 
     const linkRegex = /https?:\/\/[^\s]+/gi;
 
@@ -26,8 +41,8 @@ let handler = async (m, { conn }) => {
     }
 }
 
-handler.group = true
+handler.command = /^(on|off) insultlink$/i;
 handler.customPrefix = /https?:\/\/[^\s]+/i;
-handler.command = new RegExp;
+handler.group = true;
 
-export default handler;
+export default { handler, handleInsultlinkCommand };
