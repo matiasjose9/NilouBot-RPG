@@ -3,7 +3,7 @@
     "_language": {
       "texto1": [
         "Por favor, use uno de los siguientes idiomas:",
-        "Ejemplo:",
+        "Ejemplo: !lang en",
         "Idioma no soportado.",
         "El idioma actual es"
       ],
