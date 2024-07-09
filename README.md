@@ -10,7 +10,7 @@
 <br>
 <div align="center">
   <a href="https://github.com/matiasjose9">
-    <img title="Desarrollador del bot" src="https://img.shields.io/badge/Autor-AleXD0009-orange?style=for-the-badge&logo=github">
+    <img title="Desarrollador del bot" src="https://img.shields.io/badge/Autor-Enzo-orange?style=for-the-badge&logo=github">
   </a>
 </div>
 
