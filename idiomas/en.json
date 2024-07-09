@@ -1,19 +1,26 @@
 {
     "plugins": {
         "_language": {
-            "texto1": [
-                "The available language is Spanish",
-                "The available language is English",
-                "Incorrect command",
-                "The current language is"
-            ],
-            "texto2": [
-                "The group language is set to Spanish",
-                "The group language is set to English"
-            ],
-            "texto3": "This command can only be used in groups",
-            "texto4": "You must be an admin to change the group language",
-            "saludo": "Hello, how are you?"
+            "errorAlreadyRegistered": "🚫 ERROR 🚫 *You are already registered*",
+            "useUnregCommand": "Do you want to register again?\n\n💬 Use the following command*\n*${usedPrefix}unreg* <Serial number>",
+            "serialNumber": "Serial number",
+            "errorWrongFormat": "🚫 ERROR 🚫 *Incorrect format*",
+            "correctUsage": "📝 Correct usage of the command",
+            "example": "Example",
+            "errorEmptyName": "🚫 ERROR 🚫 The name cannot be empty*",
+            "errorEmptyAge": "🚫 ERROR 🚫 *Age cannot be empty*",
+            "errorNameTooLong": "🚫 ERROR 🚫 The name is too long*",
+            "errorAgeTooHigh": "Is a dinosaur trying to play with the bot?",
+            "errorAgeTooLow": "You are too young to register in this Bot",
+            "saludo": `°°°·.¯°·._.··._.·°°°
+> *✅ 𝑹𝑬𝑮𝑰𝑺𝑻𝑬𝑹* 
+╭───── • ◆ • ─────╮
+> *✍🏻 𝑵𝑨𝑴𝑬:* ${name}
+> *✨ 𝑨𝑮𝑬* : ${age} years
+> *📌 𝑺𝑬𝑹𝑰𝑨𝑳 𝑵𝑼𝑴𝑩𝑬𝑹*:
+> ${sn}
+> Use *${usedPrefix}menu* to see the command menu
+┗───── • ◆ • ─────╯`
         }
     }
 }
