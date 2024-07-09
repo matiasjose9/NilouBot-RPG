@@ -7,7 +7,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
         const data = global;
         const idioma = data.db.data.users[m.sender].language;
         const _translate = JSON.parse(fs.readFileSync(`./idiomas/${idioma}.json`, 'utf8'));
-        const traductor = _translate.plugins._general;
+        const traductor = _translate.plugins._registro;
 
   let name2 = conn.getName(m.sender)
   if (user.registered === true) throw `🚫 𝐄𝐑𝐑𝐎𝐑 🚫 *Ya ᥱs𝗍ᥲ́s registrado*\n\n¿Quiere registrarse de vuelta?\n\n💬 Use el siguiente comando*\n*${usedPrefix}unreg* <Numero de serie>`
