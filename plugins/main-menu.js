@@ -3,19 +3,14 @@ import { join } from 'path'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
-        const data = global;
-        const idioma = data.db.data.users[m.sender].language;
-        const _translate = JSON.parse(fs.readFileSync(`./idiomas/${idioma}.json`, 'utf8'));
-        const traductor = _translate.plugins._descargas;
-
 
 let tags = {
-  'main': '𝐈𝐍𝐅𝐎',
-  'search': '𝐒𝐄𝐀𝐑𝐂𝐇',
-  'dl': '𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐒',
-  'tools': '𝐓𝐎𝐎𝐋𝐒',
-  'sticker': '𝐒𝐓𝐈𝐂𝐊𝐄𝐑𝐒',
-  'owner': '𝐂𝐑𝐄𝐀𝐃𝐎𝐑',
+  'main': 'GENERAL',
+  'search': 'SEARCH',
+  'dl': 'DOWNLOADS',
+  'tools': 'HERRAMIENTAS',
+  'sticker': 'STICKERS',
+  'owner': 'CREADOR',
   'nilou': 'NILOU-INFO'
 }
 
@@ -30,7 +25,6 @@ const defaultMenu = {
 │ *👤 𝑼𝒔𝒖𝒂𝒓𝒊𝒐𝒔* : %totalreg
 ╰────────────┈⊷
 %readmore
-%traductor.texto1
 ╭─────────────┈⊷
 │   「 𝗜𝗡𝗙𝗢 𝗨𝗦𝗘𝗥𝗦 」
 ╰┬────────────┈⊷
