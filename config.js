@@ -10,7 +10,7 @@ import moment from 'moment-timezone'
 
 
 global.owner = [
-  ['+54', 'Enzo', true],
+  ['5491168758497', 'Enzo', true],
   ['5492215034412', 'matias-crypto', true],
   ['']
 
