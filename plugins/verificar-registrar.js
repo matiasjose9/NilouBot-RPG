@@ -1,3 +1,8 @@
+        const data = global
+        const idioma = data.db.data.users[m.sender].language
+        const _translate = JSON.parse(fs.readFileSync(`./idiomas/${idioma}.json`))
+        const tradutor = _translate.plugins._language
+
 import { createHash } from 'crypto'
 let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
 let handler = async function (m, { conn, text, usedPrefix, command }) {
