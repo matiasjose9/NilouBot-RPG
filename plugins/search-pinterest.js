@@ -9,7 +9,7 @@ await conn.sendFile(m.chat, dl_url, 'thumbnail.jpg', null, m)
 m.react(done)
 } catch {
 }}
-handler.help = ['pinterest <texto>']
+handler.help = ['pinteres <texto>']
 handler.tags = ['tools']
 handler.command = ['pinterest']
 export default handler
