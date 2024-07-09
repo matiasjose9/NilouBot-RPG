@@ -5,7 +5,7 @@ const handler = async (m, { args, usedPrefix, command, isAdmin }) => {
     const data = global
     let idioma = data.db.data.users[m.sender].language || 'es' // Idioma predeterminado
     
-    // Verificar si el archivo de idioma existe
+    
     if (!fs.existsSync(`./idiomas/${idioma}.json`)) {
       throw new Error(`Archivo de idioma no encontrado: ./idiomas/${idioma}.json`)
     }
