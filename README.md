@@ -18,7 +18,8 @@
   </a>
 </div>
 
-# 📖 Características del bot 
+> 📖 Características de NilouBot-Lite 
+
 |  Funciones y comandos  |                                           Sip |
 | :---------------------------------------------: | :-----------: |
 | Crea stickers|✔️|
@@ -46,7 +47,7 @@ Para nuevos desde cero en termux.apk:
 ```
 ## `EJECUTAR EL BOT`
 ```bash
-> git clone https://github.com/AleXD0009/Sylpha-bot
+> git clone https://github.com/matiasjose9/NilouBotLite-MD
 > cd Sylpha-bot 
 > npm install 
 > yarn install 
