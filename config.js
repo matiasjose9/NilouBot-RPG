@@ -23,12 +23,12 @@ global.prems = []
    
 
 
-global.packname = ``
-global.author = '@ 2024 JTxs | All rigths reserved'
+global.packname = `NilouBot | Enzo`
+global.author = '@ 2024 Enzo | Matías-Crypto'
 
 global.botname = '🌹 𝗡𝗶𝗹𝗼𝘂 - 𝗕𝗼𝘁 - 𝗟𝗶𝘁𝗲 🪷'
 
-global.name_canal = '@ 2024 Enzo | All rigths reserved'
+global.name_canal = '@ 2024 Enzo | Matías -Crypto'
 global.id_canal = '120363314585338428@newsletter'
 
 
