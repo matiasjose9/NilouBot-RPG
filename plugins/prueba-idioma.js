@@ -1,14 +1,18 @@
-import { getLanguage } from './global.js';
+import fs from 'fs'
 
-let handler = async (m, { conn }) => {
-  const lang = getLanguage();
+const saludoHandler = async (m) => {
+    try {
+        const data = global
+        const idioma = data.db.data.users[m.sender].language
+        const _translate = JSON.parse(fs.readFileSync(`./idiomas/${idioma}.json`))
+        const tradutor = _translate.plugins._language
 
-  
-  await conn.reply(m.chat, lang.ejemplo.mensajeInicial, m);
-};
+        m.reply(tradutor.saludo)
+    } catch (error) {
+        m.reply(`*[ERROR]* - _Error al cargar el idioma._`)
+    }
+}
 
-handler.help = ['ejemplo'];
-handler.tags = ['example'];
-handler.command = /^(ejemplo)$/i;
+saludoHandler.command = /^(saludo)$/i
 
-export default handler;
+export default saludoHandler
