@@ -4,6 +4,12 @@ const handler = async (m, { args, usedPrefix, command, isAdmin }) => {
   try {
     const data = global
     let idioma = data.db.data.users[m.sender].language || 'es' // Idioma predeterminado
+    
+    // Verificar si el archivo de idioma existe
+    if (!fs.existsSync(`./idiomas/${idioma}.json`)) {
+      throw new Error(`Archivo de idioma no encontrado: ./idiomas/${idioma}.json`)
+    }
+
     const _translate = JSON.parse(fs.readFileSync(`./idiomas/${idioma}.json`))
     const tradutor = _translate.plugins._language
 
@@ -56,7 +62,7 @@ ${tradutor.texto2[1]}
       }
     }
   } catch (error) {
-    console.error(error)
+    console.error(error) // Mensaje de depuración
     global.db.data.users[m.sender].language = 'es'
     if (m.isGroup) {
       global.db.data.chats[m.chat].language = 'es'
