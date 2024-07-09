@@ -8,8 +8,8 @@ const handler = async (m) => {
         const traductor = _translate.plugins._general;
 
         const info = `
-{traductor.texto1}
-{traductor.texto2}
+{tradutor.texto1}
+{tradutor.texto2}
 `;
 
         m.reply(info);
