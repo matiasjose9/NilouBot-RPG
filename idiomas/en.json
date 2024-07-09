@@ -4,30 +4,29 @@
       "texto1": [
         "Please use one of the following languages:",
         "Example: !lang en",
-        "Language not supported.",
-        "Current language is"
+        "Unsupported language.",
+        "The current language is"
       ],
       "texto2": [
         "Please use one of the following languages:",
         "Example:"
       ],
       "texto3": "This command can only be used in groups.",
-      "texto4": "You need to be an admin to change the group's language.",
-      "saludo": "Hello how are you"
+      "texto4": "You need to be an admin to change the group language.",
+      "saludo": "Hello, how are you?"
     },
     "_general": {
       "texto1": "`NilouBot-Lite`",
       "texto2": [
-      "I am NilouBot-Lite, a multi-device WhatsApp bot ",
-    "Enzo and matias-crypto created me",
-   "I was created with the purpose of helping people download videos from Instagram, Facebook and etc. ",
-   "I am a simple bot but soon I will have many more functions, trust me 🤗 "
-   ],
-  "texto3": "Info about me"
+        "I am NilouBot-Lite, a multi-device WhatsApp bot",
+        "I was created by matias-crypto and Enzo",
+        "I was created to help people download videos from Instagram, Facebook, etc.",
+        "I am a simple bot but I will have many more features soon, believe me 🤗"
+      ],
+      "texto3": "> Information about me"
     },
- "_descargas": {
- "texto1": "Enter a link, example"
-   }
+    "_descargas": {
+      "texto1": "Enter a link, example"
+    }
   }
 }
-
