@@ -21,7 +21,7 @@ const rl = createInterface(process.stdin, process.stdout);
 const app = express();
 const port = process.env.PORT || 8080;
 
-figlet('SYLPHA-BOT', {
+figlet('NILOUBOTLITE-MD', {
   font: 'Slant', 
   horizontalLayout: 'default',
   verticalLayout: 'default'
