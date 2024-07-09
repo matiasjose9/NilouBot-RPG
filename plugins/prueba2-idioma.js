@@ -7,7 +7,13 @@ const handler = async (m) => {
         const _translate = JSON.parse(fs.readFileSync(`./idiomas/${idioma}.json`))
         const tradutor = _translate.plugins._general
 
-        m.reply(tradutor.texto1)
+const info = `
+{traductor.texto1}
+
+{traductor.texto2}
+`
+
+        m.reply(info)
     } catch (error) {
         m.reply(`*[ERROR]* - _Error al cargar el idioma._`)
     }
