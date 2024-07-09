@@ -14,10 +14,9 @@
       "texto3": "Este comando solo se puede usar en grupos.",
       "texto4": "Necesitas ser administrador para cambiar el idioma del grupo.",
       "saludo": "Hola cómo estás"
+    },
+    "_general": {
+      "texto1": "hola xd"
     }
-  "_general": {
-"texto1": "hola xd"
- }
-
   }
 }
