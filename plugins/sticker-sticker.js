@@ -42,6 +42,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 handler.help = ['sticker']
 handler.tags = ['sticker']
 handler.command = ['s', 'sticker', 'stiker'] 
+handler.register = true
 
 export default handler
 
