@@ -5,7 +5,7 @@
 </div>
 
 <br>
-<img src="https://telegra.ph/file/d881dc8f4e9d05d7dba66.jpg" alt="NilouBot-Lite By Enzo & matias-crypto" width="400" height="230">
+<img src="https://telegra.ph/file/2ecbcbd24f4acebed817d.jpg" alt="NilouBot-Lite By Enzo & matias-crypto" width="400" height="230">
 </div>
 <br>
 <div align="center">
