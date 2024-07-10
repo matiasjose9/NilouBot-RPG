@@ -404,7 +404,7 @@ export async function handler(chatUpdate) {
 global.dfail = (type, m, conn, usedPrefix) => {
     let msg = {
         rowner: `Hola, este comando solo puede ser utilizado por el *Creador* de la Bot.`,
-        owner: `Hola, este comando solo puede ser utilizado por el *Creador* de la Bot y *Sub Bots*.`,
+        owner: `Hola, este comando solo puede ser utilizado por el *Creador* del Bot y *Sub Bots*.`,
         mods: `Hola, este comando solo puede ser utilizado por los *Moderadores* de la Bot.`,
         premium: `Hola, este comando solo puede ser utilizado por Usuarios *Premium*.`,
         group: `Hola, este comando solo puede ser utilizado en *Grupos*.`,
