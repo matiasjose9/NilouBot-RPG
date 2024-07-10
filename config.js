@@ -17,7 +17,7 @@ global.owner = [
 ]
 
 
-global.cuentas = ['https://whatsapp.com/channel/0029VajIId22phHQLslZah1n']
+global.canal = ['https://whatsapp.com/channel/0029VajIId22phHQLslZah1n']
 
 global.mods = []
 global.prems = []
