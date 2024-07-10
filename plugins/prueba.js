@@ -1,4 +1,4 @@
-import axios from 'axios';
+import fetch from 'node-fetch';
 
 let handler = async (m, { conn }) => {
     const phoneNumberRegex = /\+[1-9]\d{1,14}/;
@@ -12,10 +12,11 @@ let handler = async (m, { conn }) => {
     let phoneNumber = phoneMatch[0];
 
     try {
-        const response = await axios.get(`https://delirios-api-delta.vercel.app/tools/country?text=${phoneNumber}`);
+        const response = await fetch(`https://delirios-api-delta.vercel.app/tools/country?text=${phoneNumber}`);
+        const data = await response.json();
 
-        if (response.status === 200) {
-            const { status, result } = response.data;
+        if (response.ok) {
+            const { status, result } = data;
             if (status && result) {
                 const { code, name, emoji, number } = result;
                 conn.reply(m.chat, `ℹ️ Información del número ${phoneNumber}:\n\nPaís: ${name}\nCódigo: ${code}\nEmoji: ${emoji}\nNúmero: ${number}`, m);
