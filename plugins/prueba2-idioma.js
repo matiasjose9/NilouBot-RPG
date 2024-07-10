@@ -18,7 +18,7 @@ ${traductor.texto2.map(item => item)}
         m.reply(`*[ERROR]* - _Error al cargar el idioma._`);
     }
 };
-
+handler.help = ['nilou']
 handler.tags = ['nilou'];
 handler.command = /^(nilou)$/i;
 
