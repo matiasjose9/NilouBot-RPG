@@ -15,8 +15,13 @@ let handler = async (m, { conn }) => {
         const response = await axios.get(`https://delirios-api-delta.vercel.app/tools/country?text=${phoneNumber}`);
 
         if (response.status === 200) {
-            const { data } = response.data;
-            conn.reply(m.chat, `ℹ️ Información del número ${phoneNumber}:\n\n${data}`, m);
+            const { status, result } = response.data;
+            if (status && result) {
+                const { code, name, emoji, number } = result;
+                conn.reply(m.chat, `ℹ️ Información del número ${phoneNumber}:\n\nPaís: ${name}\nCódigo: ${code}\nEmoji: ${emoji}\nNúmero: ${number}`, m);
+            } else {
+                conn.reply(m.chat, "No se encontró información para el número de teléfono proporcionado.", m);
+            }
         } else {
             conn.reply(m.chat, "No se pudo obtener información del número de teléfono en este momento.", m);
         }
