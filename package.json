@@ -18,16 +18,16 @@
     "eslint": "eslint .",
     "eslintfix": "eslint --fix ."
   },
-  "homepage": "https://github.com/AleXD0009/NilouBotLite-MD",
+  "homepage": "https://github.com/matiasjose9/NilouBotLite-MD",
   "author": {
     "name": "Enzo"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AleXD0009/Sylpha-bot.git"
+    "url": "git+https://github.com/matiasjose9/NilouBotLite-MD.git"
   },
   "bugs": {
-    "url": "https://github.com/AleXD0009/Sylpha-bot/issues"
+    "url": "https://github.com/matiasjose9/NilouBotLite-MD/issues"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
