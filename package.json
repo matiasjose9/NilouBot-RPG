@@ -1,5 +1,5 @@
 {
-  "name": "sylpha-bot",
+  "name": "NilouBot-Lite",
   "version": "1.0.0",
   "description": "WhatsApp Bot Multi Device",
   "main": "index.js",
@@ -18,9 +18,9 @@
     "eslint": "eslint .",
     "eslintfix": "eslint --fix ."
   },
-  "homepage": "https://github.com/AleXD0009/Sylpha-bot",
+  "homepage": "https://github.com/AleXD0009/NilouBotLite-MD",
   "author": {
-    "name": "JTxs"
+    "name": "Enzo"
   },
   "repository": {
     "type": "git",
