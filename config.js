@@ -29,9 +29,9 @@ global.author = '@ 2024 Enzo | Matías-Crypto'
 //
 global.botname = '🌹 NILOU - BOT - RPG 🪷'
 //
-global.name_canal = '@ 2024 Enzo | Matías-Crypto'
+global.name_canal = '🌸MOONLIGTH | TEAM🌸'
 //
-global.id_canal = '120363314585338428@newsletter'
+global.id_canal = '120363287674836365@newsletter'
 //
 global.catalogo = fs.readFileSync('./storage/img/catalogo.png')
 
