@@ -1,4 +1,4 @@
-let handler = async (m, { conn }) => {
+let handlerMine = async (m, { conn }) => {
   let user = global.db.data.users[m.sender]
   let lastMine = user.lastMine || 0
   let cooldown = 30 * 60 * 1000
@@ -15,11 +15,21 @@ let handler = async (m, { conn }) => {
   user.stars = (user.stars || 0) + stars
   user.lastMine = now
 
-  conn.reply(m.chat, `🌟 Has ganado ${stars} estrellas!.`, m, rcanal)
+  conn.reply(m.chat, `🌟 Has ganado ${stars} estrellas!`, m)
 }
 
-handler.help = ['minar']
-handler.tags = ['economia']
-handler.command = ['minar']
+let handlerVerStars = async (m, { conn }) => {
+  let user = global.db.data.users[m.sender]
+  let stars = user.stars || 0
+  conn.reply(m.chat, `🌟 Tienes ${stars} estrellas.`, m)
+}
 
-export default handler
+handlerMine.help = ['minar']
+handlerMine.tags = ['economia']
+handlerMine.command = ['minar']
+
+handlerVerStars.help = ['verstars']
+handlerVerStars.tags = ['economia']
+handlerVerStars.command = ['verstars']
+
+export { handlerMine as minarHandler, handlerVerStars as verstarsHandler }
