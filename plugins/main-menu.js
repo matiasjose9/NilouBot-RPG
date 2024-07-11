@@ -12,7 +12,8 @@ let tags = {
   'sticker': 'STICKERS',
   'owner': 'CREADOR',
   'imagen': 'IMAGENES',
-  'registro': 'REGISTRAR'
+  'registro': 'REGISTRAR',
+  'rpg': 'REGISTRAR'
 }
 
 const defaultMenu = {
