@@ -10,7 +10,7 @@ m.react('🥺')
 }
 handler.help = ['boysxd']
 handler.tags = ['']
-handler.command = ['meme', 'memes']
+handler.command = ['boyxd', 'boysxd']
 
 handler.register = true
 
