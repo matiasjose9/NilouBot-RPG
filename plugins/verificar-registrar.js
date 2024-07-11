@@ -8,9 +8,9 @@ let handler = async function (m, { conn, usedPrefix, command }) {
   user.regTime = +new Date
 
   let sn = createHash('md5').update(m.sender).digest('hex')
-  let description = await conn.getName(m.sender) || 'Sin descripción'
+  let nombre = await conn.getName(m.sender) || 'Sin nombre'
 
-  await m.reply(`✅ 𝑹𝑬𝑮𝑰𝑺𝑻𝑹𝑶\n\nTu número:\n\n${m.sender}\n\nDescripción: ${description}`)
+  await m.reply(`✅ 𝑹𝑬𝑮𝑰𝑺𝑻𝑹𝑶\n\nTu número:\n\n${m.sender}\n\nTu nombre: ${nombre}`)
 }
 
 handler.help = ['reg']
