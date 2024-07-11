@@ -11,7 +11,6 @@ let tags = {
   'tools': 'HERRAMIENTAS',
   'sticker': 'STICKERS',
   'owner': 'CREADOR',
-  'nilou': 'NILOU-INFO',
   'imagen': 'IMAGENES'
 }
 
