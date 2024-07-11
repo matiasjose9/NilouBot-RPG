@@ -9,6 +9,7 @@ await conn.sendFile(m.chat, dl_url, 'igdl.mp4', null, m, null, rcanal)
 }}
 handler.help = ['instagram *<link>*']
 handler.tags = ['dl']
+handler.register = true
 handler.command = /^(instagramdl|instagram|igdl|ig|instagramdl2|instagram2|igdl2|ig2|instagramdl3|instagram3|igdl3|ig3)$/i
 
 export default handler
