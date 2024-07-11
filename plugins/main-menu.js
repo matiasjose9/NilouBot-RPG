@@ -12,7 +12,7 @@ let tags = {
   'sticker': 'STICKERS',
   'owner': 'CREADOR',
   'imagen': 'IMAGENES',
-  'registrar': 'REGISTRAR'
+  'registro': 'REGISTRAR'
 }
 
 const defaultMenu = {
