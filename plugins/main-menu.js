@@ -39,7 +39,7 @@ const defaultMenu = {
  *🪷 𝑵𝒊𝒗𝒆𝒍* : %level
  *🌸 𝑿𝑷* : %totalexp
 
-%readmore
+%readmore`
 
 
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
