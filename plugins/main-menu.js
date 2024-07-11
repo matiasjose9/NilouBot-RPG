@@ -41,13 +41,6 @@ const defaultMenu = {
 
 %readmore
 
-\t\t\t*𝗖 𝗢 𝗠 𝗠 𝗔 𝗡 𝗗 𝗦*
-`.trimStart(),
-  header: '╭──────••──────╮\n│ [ *%category*  ]\n┗——————«»——————',
-  body: '> *%cmd*\n',
-  footer: '╰───── • | • ─────╯\n',
-  after: '`Powered By MoonLigth Team`',
-}
 
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   try {
