@@ -13,7 +13,7 @@ let tags = {
   'owner': 'CREADOR',
   'imagen': 'IMAGENES',
   'registro': 'REGISTRAR',
-  'rpg': 'REGISTRAR'
+  'rpg': 'RPG - COMMANDS'
 }
 
 const defaultMenu = {
