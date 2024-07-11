@@ -165,6 +165,7 @@ let img = 'https://telegra.ph/file/c20bb077a71d364dfb118.jpg'
 }
 
 handler.command = ['menu', 'help', 'menú'] 
+handler.register = true
 export default handler
 
 
