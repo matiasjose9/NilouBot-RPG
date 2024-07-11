@@ -15,7 +15,7 @@ let handler = async (m, { conn }) => {
   user.stars = (user.stars || 0) + stars
   user.lastMine = now
 
-  conn.reply(m.chat, `🌟 Has ganado ${stars} estrellas! Ahora tienes un total de ${user.stars} estrellas.`, m)
+  conn.reply(m.chat, `🌟 Has ganado ${stars} estrellas!.`, m, rcanal)
 }
 
 handler.help = ['minar']
