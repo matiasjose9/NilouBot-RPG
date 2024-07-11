@@ -46,7 +46,7 @@ figlet('Creado Por Enzo y matias-crypto', {
   console.log(chalk.magenta(data));
 });
 
-say('NilouBotLite-MD', {
+say('NilouBot-RPG', {
   font: 'chrome',
   align: 'center',
   gradient: ['red', 'magenta']
