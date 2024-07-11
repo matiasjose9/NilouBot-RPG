@@ -3,7 +3,6 @@ import { join } from 'path'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
-
 let tags = {
   'main': 'GENERAL',
   'search': 'SEARCH',
@@ -23,7 +22,7 @@ const defaultMenu = {
 *Escribe ".code" en el privado del bot*
 
 ╭─────────────┈⊷
-│  「 𝗜𝗡𝗙𝗢 - 𝗕𝗢𝗧 」
+│  「 𝗜𝗡𝗙𝗢 - 𝗕𝗢𝗧 」
 ╰┬────────────┈⊷
  *✨ 𝑴𝒐𝒅𝒐* : Público
  *🌹 𝑩𝒂𝒊𝒍𝒆𝒚𝒔* : Multi Device
@@ -32,7 +31,7 @@ const defaultMenu = {
 
 %readmore
 ╭─────────────┈⊷
-│   「 𝗜𝗡𝗙𝗢 𝗨𝗦𝗘𝗥𝗦 」
+│   「 𝗜𝗡𝗙𝗢 𝗨𝗦𝗘𝗥𝗦 」
 ╰┬────────────┈⊷
  *📌 𝑵𝒐𝒎𝒃𝒓𝒆* : %name
  *🪙 𝑵𝒊𝒍𝒐𝒖𝑪𝒐𝒊𝒏𝒔* : %limit
@@ -40,7 +39,7 @@ const defaultMenu = {
  *🌸 𝑿𝑷* : %totalexp
 
 %readmore`
-
+}
 
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   try {
@@ -80,20 +79,26 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     let uptime = clockString(_uptime)
     let totalreg = Object.keys(global.db.data.users).length
     let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
-    let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
-      return {
-        help: Array.isArray(plugin.tags) ? plugin.help : [plugin.help],
-        tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],
-        prefix: 'customPrefix' in plugin,
-        limit: plugin.limit,
-        premium: plugin.premium,
-        enabled: !plugin.disabled,
-      }
-    })
-    for (let plugin of help)
-      if (plugin && 'tags' in plugin)
-        for (let tag of plugin.tags)
+
+    // Define manual commands here
+    let manualCommands = [
+      { help: ['start'], tags: ['main'], prefix: true, limit: false, premium: false },
+      { help: ['search'], tags: ['search'], prefix: true, limit: false, premium: false },
+      { help: ['download'], tags: ['dl'], prefix: true, limit: false, premium: false },
+      { help: ['tool'], tags: ['tools'], prefix: true, limit: false, premium: false },
+      { help: ['sticker'], tags: ['sticker'], prefix: true, limit: false, premium: false },
+      { help: ['owner'], tags: ['owner'], prefix: true, limit: false, premium: false },
+      { help: ['image'], tags: ['imagen'], prefix: true, limit: false, premium: false }
+    ]
+
+    for (let plugin of manualCommands) {
+      if (plugin && 'tags' in plugin) {
+        for (let tag of plugin.tags) {
           if (!(tag in tags) && tag) tags[tag] = tag
+        }
+      }
+    }
+    
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || defaultMenu.before
     let header = conn.menu.header || defaultMenu.header
@@ -104,7 +109,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       before,
       ...Object.keys(tags).map(tag => {
         return header.replace(/%category/g, tags[tag]) + '\n' + [
-          ...help.filter(menu => menu.tags && menu.tags.includes(tag) && menu.help).map(menu => {
+          ...manualCommands.filter(menu => menu.tags && menu.tags.includes(tag) && menu.help).map(menu => {
             return menu.help.map(help => {
               return body.replace(/%cmd/g, menu.prefix ? help : '%p' + help)
                 .replace(/%islimit/g, menu.limit ? '◜⭐◞' : '')
@@ -140,26 +145,16 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-
-/*let pp = `https://telegra.ph/file/c20bb077a71d364dfb118.jpg`
-let pp2 = `https://telegra.ph/file/c20bb077a71d364dfb118.jpg`
-    await m.react('💙')
-    await conn.sendMessage(m.chat, { video: { url: [ pp, pp2 ].getRandom() }, gifPlayback: true, caption: text.trim(), mentions: [m.sender] }, { quoted: m })*/
-
-let img = 'https://telegra.ph/file/c20bb077a71d364dfb118.jpg'
-    
-   await conn.sendFile(m.chat, img, 'thumbnail.jpg', text.trim(), m, null, rcanal)
-   //await conn.sendSP(m.chat, botname, null, text.trim(), img, img, null, m)
-
+    let img = 'https://telegra.ph/file/c20bb077a71d364dfb118.jpg'
+    await conn.sendFile(m.chat, img, 'thumbnail.jpg', text.trim(), m)
   } catch (e) {
     conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error.', m)
     throw e
   }
 }
 
-handler.command = ['menu', 'help', 'menú'] 
+handler.command = ['menu', 'help', 'menú']
 export default handler
-
 
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
@@ -171,10 +166,10 @@ function clockString(ms) {
   return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
 }
 
-  var ase = new Date();
-  var hour = ase.getHours();
+var ase = new Date();
+var hour = ase.getHours();
 switch(hour){
-  case 0: hour = 'una linda noche 🌙'; break;
+    case 0: hour = 'una linda noche 🌙'; break;
   case 1: hour = 'una linda noche 💤'; break;
   case 2: hour = 'una linda noche 🦉'; break;
   case 3: hour = 'una linda mañana ✨'; break;
