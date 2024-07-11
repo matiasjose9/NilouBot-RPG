@@ -16,6 +16,7 @@ let tags = {
 
 const defaultMenu = {
   before: `
+*NILOU-BOT-RPG*
 
 > ¿Quieres volverte sub bot?
 
