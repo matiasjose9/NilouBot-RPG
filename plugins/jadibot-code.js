@@ -37,7 +37,7 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner, isROw
             fs.writeFileSync(`NilouJadiBot/creds.json`, Buffer.from(args[0], 'base64').toString('utf-8'));
         }
 
-        const { state, saveState, saveCreds } = await useMultiFileAuthState(`./LuffyJadiBot/${authFolderB}`);
+        const { state, saveState, saveCreds } = await useMultiFileAuthState(`./NilouJadiBot/${authFolderB}`);
         const msgRetryCounterMap = (MessageRetryMap) => {};
         const msgRetryCounterCache = new NodeCache();
         const { version } = await fetchLatestBaileysVersion();
