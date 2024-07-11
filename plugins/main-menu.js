@@ -11,7 +11,8 @@ let tags = {
   'tools': 'HERRAMIENTAS',
   'sticker': 'STICKERS',
   'owner': 'CREADOR',
-  'imagen': 'IMAGENES'
+  'imagen': 'IMAGENES',
+  'registrar': 'REGISTRAR'
 }
 
 const defaultMenu = {
