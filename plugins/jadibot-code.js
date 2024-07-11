@@ -19,7 +19,7 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner, isROw
     }
 
     if (global.conns.length >= 4) {
-        conn.reply(m.chat, '🚫 No hay más espacios disponibles para sub bots.', m);
+        conn.reply(m.chat, '🚫 No hay más espacios disponibles para sub bots.', m, rcanal);
         return;
     }
 
