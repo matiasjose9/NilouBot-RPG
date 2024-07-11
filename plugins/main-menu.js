@@ -153,7 +153,7 @@ let pp2 = `https://telegra.ph/file/5351c552290e5f5923e9a.jpg`
     await m.react('💙')
     await conn.sendMessage(m.chat, { video: { url: [ pp, pp2 ].getRandom() }, gifPlayback: true, caption: text.trim(), mentions: [m.sender] }, { quoted: m })*/
 
-let img = 'https://telegra.ph/file/5351c552290e5f5923e9a.jpg'
+let img = 'https://telegra.ph/file/50d93a9e1803a6c858b13.jpg'
     
    await conn.sendFile(m.chat, img, 'thumbnail.jpg', text.trim(), m, null, rcanal)
    //await conn.sendSP(m.chat, botname, null, text.trim(), img, img, null, m)
