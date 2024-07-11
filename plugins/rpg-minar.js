@@ -19,7 +19,7 @@ let handler = async (m, { conn }) => {
 }
 
 handler.help = ['minar']
-handler.tags = ['economia']
+handler.tags = ['rpg']
 handler.command = ['minar']
 
 export default handler
