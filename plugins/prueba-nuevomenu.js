@@ -9,7 +9,7 @@ m.react('🥺')
 
 }
 handler.help = ['boysxd']
-handler.tags = ['']
+handler.tags = ['imagen']
 handler.command = ['boyxd', 'boysxd']
 
 handler.register = true
