@@ -163,7 +163,7 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner, isROw
 };
 
 handler.help = ['code'];
-handler.tags = ['JADIBOT'];
+handler.tags = ['jadibots'];
 handler.command = ['code'];
 handler.register = true;
 handler.private = true;
