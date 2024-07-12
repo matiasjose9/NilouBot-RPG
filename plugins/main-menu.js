@@ -13,7 +13,8 @@ let tags = {
   'owner': 'CREADOR',
   'imagen': 'IMAGENES',
   'registro': 'REGISTRAR',
-  'rpg': 'RPG - COMMANDS'
+  'rpg': 'RPG - COMMANDS',
+  'jadibots': 'JADIBOTS' 
 }
 
 const defaultMenu = {
