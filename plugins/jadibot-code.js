@@ -13,10 +13,8 @@ import { makeWASocket } from '../lib/simple.js';
 if (!(global.conns instanceof Array)) global.conns = [];
 
 let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner, isROwner }) => {
-    if (!global.db.data.settings[_conn.user.jid].jadibotmd && !isROwner) {
-        conn.reply(m.chat, '🚩 Este Comando está deshabilitado por mi creador.', m, rcanal);
-        return;
-    }
+
+    
 
     if (global.conns.length >= 4) {
         conn.reply(m.chat, '🚫 No hay más espacios disponibles para sub bots.', m, rcanal);
